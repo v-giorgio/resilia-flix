@@ -5,8 +5,52 @@
   --blue-neon: #4717f6;
 }
 
+/* NAVBAR */
+.navbar-color {
+  background-color: var(--black-void);
+}
+
+#navbar-text-color {
+  color: var(--purple);
+}
+
+.navbar-item {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+#navbar-text-color:hover {
+  color: var(--blue-neon);
+}
+
+.shadow-navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.753);
+  box-shadow: 0 0 1rem var(--black-void);
+}
+
+.logo-style:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.logo-style:hover,
+.logo-style:not(:hover),
+.icon-style:hover,
+.icon-style:not(:hover),
+.icon-style:focus {
+  transition-duration: 0.6s;
+}
+
+.icon-style:hover,
+.icon-style:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--purple);
+  transform: translateY(-0.25em);
+}
 .teste {
-  height: 500px;
+  height: 100vh;
 }
 
 /* FOOTER */
@@ -15,6 +59,8 @@
   padding: 50px 0 0.1px 0;
   color: var(--purple);
   background-color: var(--black-void);
+  border-top: 1px solid rgba(0, 0, 0, 0.753);
+  box-shadow: 0 0 1rem var(--black-void);
 }
 
 .item {
@@ -65,7 +111,8 @@
   opacity: 0.9;
 }
 
-.footer .item-icon.icons a:hover, .logo:hover {
+.footer .item-icon.icons a:hover,
+.logo:hover {
   opacity: 1.5;
 }
 
