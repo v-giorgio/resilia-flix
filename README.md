@@ -20,12 +20,12 @@
 <h3>. . . Em construção</h3>
 <hr><br>
 <h2 style="margin-bottom: 30px">Tecnologias utilizadas</h2>
-<img width="100" style="margin-right: 30px" src="./src/assets/img/html-css-js-icon.png"> 
-<img width="80" style="margin-right: 30px"  src="./src/assets/img/discord-icon.png"> 
-<img width="50" style="margin-right: 30px"  src="./src/assets/img/figma-icon.png"> 
-<img width="80" style="margin-right: 30px"  src="./src/assets/img/bootstrap-icon.png"> 
-<img width="70" style="margin-right: 30px"  src="./src/assets/img/jquery-icon.png"> 
-<img width="100" style="margin-right: 30px"  src="./src/assets/img/trello-icon.png"> 
+<img width="100" src="./src/assets/img/html-css-js-icon.png"> 
+<img width="80" src="./src/assets/img/discord-icon.png"> 
+<img width="50" src="./src/assets/img/figma-icon.png"> 
+<img width="80" src="./src/assets/img/bootstrap-icon.png"> 
+<img width="70" src="./src/assets/img/jquery-icon.png"> 
+<img width="100" src="./src/assets/img/trello-icon.png"> 
 <hr>
 <h2>APIs utilizadas</h2>
 <li style="margin: 10px 0; font-size: 16px"><a href="http://www.omdbapi.com/">API OMDb</a></li>
