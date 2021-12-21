@@ -94,6 +94,7 @@
   border: 2px solid var(--purple);
   box-shadow: 0 0 1.5rem var(--black-void);
   margin-right: 5%;
+  contain: content;
 }
 
 .form-login h1 {
@@ -111,12 +112,39 @@
 .form-login input,
 .form-login button {
   max-width: 70%;
-  background-color: var(--black-void-blur);
-  outline: none;
-  border: 1px solid var(--purple);
-  border-radius: 5px;
+  background-color: transparent;
   padding: 1.5% 2%;
   color: var(--purple);
+  border-radius: 5px;
+}
+
+.form-login input {
+  border: none;
+  outline: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 1px solid var(--purple);
+}
+
+.login-forgot-password,
+.login-register {
+  font-size: 18px;
+  color: var(--purple);
+  margin: 3% 0 1% 2%;
+}
+
+.login-forgot-password a,
+.login-register a {
+  color: var(--purple);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.login-forgot-password a:hover,
+.login-register a:hover {
+  color: var(--purple);
+  font-weight: bold;
+  margin-left: 2.2%;
 }
 
 .form-login input::placeholder {
@@ -125,8 +153,9 @@
 }
 
 .form-login button {
+  border: 1px solid var(--purple);
   max-width: 50%;
-  margin-top: 10%;
+  margin: 2% 0;
   box-shadow: 0 0 0.1rem var(--purple);
   background-color: var(--black-void-blur);
   font-size: 20px;
@@ -135,13 +164,17 @@
 .form-login input:hover,
 .form-login button:hover {
   cursor: pointer;
-  box-shadow: 0 0 1rem var(--purple);
+  box-shadow: 0 0 0.6rem var(--purple);
 }
 
 .form-login input:hover,
 .form-login button:hover,
 .form-login input:not(:hover),
-.form-login button:not(:hover) {
+.form-login button:not(:hover),
+.login-forgot-password a:hover,
+.login-forgot-password a:not(:hover),
+.login-register a:hover,
+.login-register a:not(:hover) {
   transition-duration: 0.3s;
 }
 
@@ -231,5 +264,8 @@
   }
   .form-login {
     width: 90%;
+  }
+  .form-login button {
+    margin: 50px 0;
   }
 }
