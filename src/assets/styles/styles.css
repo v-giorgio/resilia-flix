@@ -145,6 +145,41 @@
   transition-duration: 0.3s;
 }
 
+/* PARTNERS CSS */
+
+.main-partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 573px;
+  width: 100%;
+  background: var(--black-blur);
+}
+
+.container-partner {
+  height: 250px;
+  width: 75%;
+  background-color: var(--purple);
+  border-radius: 15px;
+  box-shadow: 0 0 1rem var(--purple);
+}
+
+.title-partner {
+  font-size: 30px;
+  color: var(--black-void);
+}
+
+.partner-logo {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.partner-logo:hover {
+  max-height: 200px;
+  max-width: 200px;
+  transition-duration: 0.7s;
+}
+
 /* FOOTER */
 
 .footer {
@@ -233,3 +268,5 @@
     width: 90%;
   }
 }
+
+
