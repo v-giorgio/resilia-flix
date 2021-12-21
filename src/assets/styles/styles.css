@@ -1,6 +1,7 @@
 /* COLOR PALETTE */
 :root {
   --black-void: #0e0b16;
+  --black-void-lighter: #161122;
   --black-void-blur: #0e0b16b9;
   --purple: #a239ca;
   --purple-blur: #a139ca41;
@@ -70,7 +71,7 @@
 
 .main-login {
   height: 100vh;
-  background: var(--black-void) url("../img/couple-watching.png");
+  background: var(--black-void-lighter) url("../img/couple-watching.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,10 +162,13 @@
   font-size: 20px;
 }
 
-.form-login input:hover,
+.form-login input:hover {
+  cursor: pointer;
+  border-bottom: 1px solid var(--blue-neon);
+}
 .form-login button:hover {
   cursor: pointer;
-  box-shadow: 0 0 0.6rem var(--purple);
+  box-shadow: 0 0 0.6rem var(--blue-neon);
 }
 
 .form-login input:hover,
@@ -178,7 +182,7 @@
   transition-duration: 0.3s;
 }
 
-/* PARTNERS CSS */
+/* PARTNERS */
 
 .main-partner {
   display: flex;
@@ -186,7 +190,7 @@
   justify-content: center;
   height: 573px;
   width: 100%;
-  background: var(--black-blur);
+  background: var(--black-void-lighter);
 }
 
 .container-partner {
@@ -208,16 +212,19 @@
 }
 
 .partner-logo:hover {
-  max-height: 200px;
-  max-width: 200px;
-  transition-duration: 0.7s;
+  max-width: 170px;
 }
 
-/* CONTACT CSS */
+.partner-logo:hover,
+.partner-logo:not(:hover) {
+  transition-duration: 0.3s;
+}
+
+/* CONTACT */
 
 .main-contact {
   height: 100%;
-  background-color: var(--black-blur);
+  background-color: var(--black-void-lighter);
 }
 
 .section-contact {
@@ -228,8 +235,20 @@
   border-radius: 15px;
 }
 
+.section-contact h1 {
+  font-weight: 300;
+}
+
 .title-contact {
   color: var(--purple);
+}
+
+.section-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-title {
@@ -238,52 +257,63 @@
 
 .img-contact {
   background-color: #4717f66c;
+  max-width: 215px;
   opacity: 1;
   border-radius: 15px;
   box-shadow: 0 0 1rem var(--blue-neon);
+  margin-bottom: 15%;
 }
 
 .imagem-contact {
-  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+  max-width: 200px;
+  min-width: 200px;
+}
+
+.footer-contact {
+  margin: 0 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 /* SUGGESTIONS */
+
 .container-form {
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  background-color: var(--black-void);
+  background-color: var(--black-void-lighter);
   color: var(--purple);
   background-image: url(../img/fundo-suggestion.png);
   background-repeat: no-repeat;
   background-size: 50%;
   background-position-x: right;
-  background-position-y: end;
+  background-position-y: bottom;
 }
 
 .container-form form {
   background: #0e0b16be;
-
   border-radius: 15px;
-  box-shadow:  5px 5px 5px var(--black-void);
-  border:1px solid var(--purple);
-
+  box-shadow: 5px 5px 5px var(--black-void);
+  border: 1px solid var(--purple);
   width: 100%;
   max-width: 500px;
-
   margin: 32px auto;
   padding: 32px 64px;
-
   display: flex;
   flex-direction: column;
 }
 
-.container-form form h2 {
-  margin-bottom: 32px;
-  color: var(--blue-neon);
+.container-form form h1 {
+  margin: 0;
+  margin-bottom: 10%;
+  color: var(--purple);
+  font-weight: 300;
 }
 
 .input-validation {
@@ -298,12 +328,13 @@
   flex-direction: column;
 }
 .input-suggestion label {
-  color:var(--purple);
+  color: var(--purple);
   margin-bottom: 15px;
+  font-size: 18px;
 }
 .input-suggestion textarea {
   background-color: transparent;
-  color: white;
+  color: var(--purple);
   border: solid 1px #a239ca;
   border-radius: 5px;
   outline: none;
@@ -324,19 +355,25 @@
   background-color: transparent;
   outline: none;
   /* text */
-  color: white;
+  color: var(--purple);
   font-size: 1em;
 }
 
 .button-suggestion {
-  margin-left: 95px;
-  margin-top: 16px;
-  background-color: var(--purple);
-  border-radius: 15px;
-  width: 50%;
+  align-self: center;
+  margin-top: 15%;
+  background-color: transparent;
+  width: 70%;
+  border: 1px solid var(--purple);
+  max-width: 70%;
+  background-color: transparent;
+  padding: 1.5% 2%;
+  color: var(--purple);
+  border-radius: 5px;
 }
 
 .input-validation input ~ label {
+  font-size: 18px;
   position: absolute;
   top: 16px;
   left: 0;
@@ -361,6 +398,25 @@
   border: 1px solid #4717f649;
   border-radius: 5px;
   padding: 0.4em;
+}
+
+.button-suggestion:hover,
+.input-suggestion textarea:hover {
+  box-shadow: 0 0 0.5rem var(--purple);
+  border-color: var(--blue-neon);
+}
+
+.input-validation input:hover {
+  border-bottom-color: var(--blue-neon);
+}
+
+.button-suggestion:hover,
+.input-suggestion textarea:hover,
+.button-suggestion:not(:hover),
+.input-suggestion textarea:not(:hover),
+.input-validation input:hover,
+.input-validation input:not(:hover) {
+  transition-duration: 0.2s;
 }
 
 /* FOOTER */
@@ -453,9 +509,11 @@
   .form-login button {
     margin: 50px 0;
   }
-  
+
   /* SUGGESTIONS */
-  .container-form{
-    background-position:center;
+  .container-form {
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: 70%;
   }
 }

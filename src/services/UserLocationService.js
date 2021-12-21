@@ -18,11 +18,11 @@ class UserLocationService {
   }
   /* Create user location with attributes */
   createLocation(response) {
-    this.cep = response.cep;
-    this.state = response.uf;
-    this.city = response.localidade;
-    this.neighborhood = response.bairro;
-    this.street = response.logradouro;
+    this._cep = response.cep;
+    this._state = response.uf;
+    this._city = response.localidade;
+    this._neighborhood = response.bairro;
+    this._street = response.logradouro;
     /*     console.log(
       this.cep,
       this.state,

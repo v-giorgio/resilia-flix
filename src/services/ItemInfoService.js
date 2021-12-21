@@ -18,16 +18,16 @@ class ItemInfoService {
   }
   /* Create movie/series with attributes */
   createItem(response) {
-    this.itemTitle = response.Title;
-    this.itemType = response.Type;
-    this.itemYear = response.Year;
-    this.itemDuration = response.Runtime;
-    this.itemDescription = response.Plot;
-    this.itemPoster = response.Poster;
-    this.itemDirector = response.Director;
-    this.itemImdbRating = response.imdbRating;
-    this.itemCast = response.Actors;
-    this.itemGenre = response.Genre;
+    this._itemTitle = response.Title;
+    this._itemType = response.Type;
+    this._itemYear = response.Year;
+    this._itemDuration = response.Runtime;
+    this._itemDescription = response.Plot;
+    this._itemPoster = response.Poster;
+    this._itemDirector = response.Director;
+    this._itemImdbRating = response.imdbRating;
+    this._itemCast = response.Actors;
+    this._itemGenre = response.Genre;
     /*     console.log(
       this.itemTitle,
       this.itemType,
