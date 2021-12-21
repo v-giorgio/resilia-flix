@@ -213,6 +213,40 @@
   transition-duration: 0.7s;
 }
 
+/* CONTACT CSS */
+
+.main-contact {
+  height: 100%;
+  background-color: var(--black-blur);
+}
+
+.section-contact {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background: var(--black-void);
+  border-radius: 15px;
+}
+
+.title-contact {
+  color: var(--purple);
+}
+
+.card-title {
+  color: var(--purple);
+}
+
+.img-contact {
+  background-color: #4717f66c;
+  opacity: 1;
+  border-radius: 15px;
+  box-shadow: 0 0 1rem var(--blue-neon);
+}
+
+.imagem-contact {
+  height: 200px;
+}
+
 /* FOOTER */
 
 .footer {
@@ -304,5 +338,3 @@
     margin: 50px 0;
   }
 }
-
-
