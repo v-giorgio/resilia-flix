@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ResiliaFlix - Sugestões</title>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -16,7 +19,33 @@
 </head>
 
 <body>
-
+    <main class="container-form">
+        <form >
+          <h2>
+            Entre em contato!
+          </h2>
+    
+          <div class="input-validation">
+            <input required type="text" maxlength="15"/>
+            <label>Nome</label>
+            <span class="error"></span>
+          </div>
+    
+          <div class="input-validation">
+            <input required type="email" minlength="8" maxlength="30"/>
+            <label>Email</label>
+            <span class="error"></span>
+          </div>
+    
+          <div class="input-suggestion">
+            <label>Comentário</label>
+            <textarea minlength="30" maxlength="70" name="" id="" cols="30" rows="10"></textarea>
+            <span class="error"></span>
+          </div>
+    
+          <button class="button-suggestion" type="submit">Enviar</button>
+        </form>
+      </main>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
