@@ -1,8 +1,24 @@
 /* COLOR PALETTE */
 :root {
   --black-void: #0e0b16;
+  --black-void-blur: #0e0b16b9;
   --purple: #a239ca;
+  --purple-blur: #a139ca41;
   --blue-neon: #4717f6;
+  --black-blur: #282828;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  background-color: var(--black-void);
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--purple-blur);
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px var(--black-void);
 }
 
 /* NAVBAR */
@@ -41,7 +57,7 @@
 .icon-style:hover,
 .icon-style:not(:hover),
 .icon-style:focus {
-  transition-duration: 0.6s;
+  transition-duration: 0.3s;
 }
 
 .icon-style:hover,
@@ -49,8 +65,152 @@
   box-shadow: 0 0.5em 0.5em -0.4em var(--purple);
   transform: translateY(-0.25em);
 }
-.teste {
+
+/* LOGIN */
+
+.main-login {
   height: 100vh;
+  background: var(--black-void) url("../img/couple-watching.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 3.5%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: left;
+}
+
+.form-login {
+  width: 50%;
+  height: 75%;
+  display: flex;
+  padding: 2% 5%;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--black-void-blur);
+  border-radius: 40px;
+  border: 2px solid var(--purple);
+  box-shadow: 0 0 1.5rem var(--black-void);
+  margin-right: 5%;
+  contain: content;
+}
+
+.form-login h1 {
+  margin: 0;
+  color: var(--purple);
+  font-weight: 300;
+}
+
+.form-login label {
+  color: var(--purple);
+  margin: 5% 0 1% 0;
+  font-size: 20px;
+}
+
+.form-login input,
+.form-login button {
+  max-width: 70%;
+  background-color: transparent;
+  padding: 1.5% 2%;
+  color: var(--purple);
+  border-radius: 5px;
+}
+
+.form-login input {
+  border: none;
+  outline: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 1px solid var(--purple);
+}
+
+.login-forgot-password,
+.login-register {
+  font-size: 18px;
+  color: var(--purple);
+  margin: 3% 0 1% 2%;
+}
+
+.login-forgot-password a,
+.login-register a {
+  color: var(--purple);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.login-forgot-password a:hover,
+.login-register a:hover {
+  color: var(--purple);
+  font-weight: bold;
+  margin-left: 2.2%;
+}
+
+.form-login input::placeholder {
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.form-login button {
+  border: 1px solid var(--purple);
+  max-width: 50%;
+  margin: 2% 0;
+  box-shadow: 0 0 0.1rem var(--purple);
+  background-color: var(--black-void-blur);
+  font-size: 20px;
+}
+
+.form-login input:hover,
+.form-login button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0.6rem var(--purple);
+}
+
+.form-login input:hover,
+.form-login button:hover,
+.form-login input:not(:hover),
+.form-login button:not(:hover),
+.login-forgot-password a:hover,
+.login-forgot-password a:not(:hover),
+.login-register a:hover,
+.login-register a:not(:hover) {
+  transition-duration: 0.3s;
+}
+
+/* PARTNERS CSS */
+
+.main-partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 573px;
+  width: 100%;
+  background: var(--black-blur);
+}
+
+.container-partner {
+  height: 250px;
+  width: 75%;
+  background-color: var(--purple);
+  border-radius: 15px;
+  box-shadow: 0 0 1rem var(--purple);
+}
+
+.title-partner {
+  font-size: 30px;
+  color: var(--black-void);
+}
+
+.partner-logo {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.partner-logo:hover {
+  max-height: 200px;
+  max-width: 200px;
+  transition-duration: 0.7s;
 }
 
 /* SUGGESTIONS */
@@ -254,8 +414,22 @@
   padding-top: 24px;
   font-size: 13px;
 }
-/* MEDIA SUGGESTION */
-@media(max-width:700px){
+
+/* MEDIA QUERIES */
+
+@media (max-width: 700px) {
+  /* LOGIN */
+  .main-login {
+    align-items: center;
+  }
+  .form-login {
+    width: 90%;
+  }
+  .form-login button {
+    margin: 50px 0;
+  }
+  
+  /* SUGGESTIONS */
   .container-form{
     background-position:center;
   }
