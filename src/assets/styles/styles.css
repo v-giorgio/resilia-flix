@@ -445,6 +445,36 @@
   align-items: center;
 }
 
+/* DETAILS */
+
+.main-details {
+  padding: 10% 0;
+  height: 100%;
+  background-color: var(--black-void-lighter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-details {
+  background-color: var(--purple);
+  border-radius: 15px;
+  box-shadow: 0 0 1rem var(--purple);
+  width: 80%;
+}
+
+.img-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.img-details {
+  max-width: 80%;
+}
+
+
 /* SUGGESTIONS */
 
 .container-form {
