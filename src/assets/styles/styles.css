@@ -4,3 +4,68 @@
   --purple: #a239ca;
   --blue-neon: #4717f6;
 }
+
+body {
+  background-color: var(--black-void);
+}
+
+
+.container-search {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color:var(--purple)
+}
+
+.container-search h2 {
+  margin-right: 50px;
+
+}
+
+.input-search, .button-search {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.input-search input {
+  height: 30px;
+}
+
+
+.button-search {
+  background-color: transparent;
+  border-radius: 100px;
+  border: none;
+}
+
+
+
+.receive-movie {
+  display: flex;
+  flex-wrap:  wrap;
+  margin: 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 75%;
+
+  
+}
+
+.box-movie {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: blueviolet;
+  
+}
