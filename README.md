@@ -31,6 +31,9 @@
 <li style="margin: 10px 0; font-size: 16px"><a href="http://www.omdbapi.com/">API OMDb</a></li>
 <li style="margin: 10px 0; font-size: 16px"><a href="https://viacep.com.br/">API ViaCEP</a></li>
 <hr>
+<h2>Padrão de Projeto</h2>
+<h3><li>Padrão MVC</li></h3>
+<hr>
 <h2>Colaboradores</h2>
 <div style="display: flex; flex-direction: column">
     <h2  style="font-weight: bold; letter-spacing: 1px; margin: 20px 0 10px 0">Eric Rodrigues</h2>
