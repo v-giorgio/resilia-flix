@@ -46,6 +46,52 @@
         </nav>
     </header>
 
+    <!-- MAIN - REGISTER FORM -->
+    <main class="main-register">
+        <form class="form-register">
+            <h1>Crie sua conta</h1>
+            <label for="register-userName">Nome</label>
+            <input type="text" name="register-userName" id="register-userName" placeholder="Informe seu nome" required
+                minlength="5" maxlength="30" autofocus>
+            <label for="register-email">E-mail</label>
+            <input type="email" name="register-email" id="register-email" placeholder="Informe seu e-mail" required
+                minlength="5" maxlength="30">
+            <label for="register-password">Senha</label>
+            <input type="password" name="register-password" id="register-password" placeholder="Crie uma nova senha"
+                required minlength="6" maxlength="15">
+            <label for="register-check-password">Confirmar senha</label>
+            <input type="password" name="register-check-password" id="register-check-password"
+                placeholder="Confirmar sua senha" required minlength="6" maxlength="15">
+            <label for="register-rg">RG</label>
+            <input type="number" name="register-rg" id="register-rg" placeholder="99.999.999-9" required minlength="9"
+                maxlength="9">
+
+            <h1>Localização</h1>
+            <label for="register-cep">CEP</label>
+            <input type="number" name="register-cep" id="register-cep" placeholder="99.999-999" required minlength="8"
+                maxlength="8">
+            <label for="register-state">Estado</label>
+            <input type="text" name="register-state" id="register-state" placeholder="" required minlength="5"
+                maxlength="30">
+            <label for="register-city">Cidade</label>
+            <input type="text" name="register-city" id="register-city" placeholder="" required minlength="5"
+                maxlength="30">
+            <label for="register-neighborhood">Bairro</label>
+            <input type="text" name="register-neighborhood" id="register-neighborhood" placeholder="" required
+                minlength="5" maxlength="30">
+            <label for="register-street">Rua</label>
+            <input type="text" name="register-street" id="register-street" placeholder="rua, avenida, ..." required
+                minlength="5" maxlength="30">
+            <label for="register-num">Número</label>
+            <input type="number" name="register-num" id="register-num" placeholder="n° da casa | apartamento" required
+                minlength="6" maxlength="15">
+            <label for="register-supp">Complemento</label>
+            <input type="text" name="register-supp" id="register-supp" placeholder="próximo ao clube ..." required
+                minlength="5" maxlength="30">
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+
     <!-- FOOTER -->
     <footer class="footer position-relative-bottom">
         <div class="container">
