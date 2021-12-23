@@ -3,10 +3,12 @@
   --black-void: #0e0b16;
   --black-void-lighter: #161122;
   --black-void-blur: #0e0b16b9;
+  --black-void-blur-2: #0e0b16da;
   --purple: #a239ca;
   --purple-blur: #a139ca41;
   --blue-neon: #4717f6;
   --black-blur: #282828;
+  --blue-neon-darker: #4717f66c;
 }
 
 /* SCROLLBAR */
@@ -144,13 +146,13 @@
 
 .login-forgot-password a:hover,
 .login-register a:hover {
-  color: var(--purple);
-  font-weight: bold;
+  color: var(--blue-neon);
   margin-left: 2.2%;
 }
 
 .form-login input::placeholder {
-  opacity: 0.8;
+  color: var(--purple);
+  opacity: 0.5;
   font-style: italic;
 }
 
@@ -165,7 +167,7 @@
 
 .form-login input:hover {
   cursor: pointer;
-  border-bottom: 1px solid var(--blue-neon);
+  box-shadow: 0 4px 2px -2px var(--blue-neon);
 }
 .form-login button:hover {
   cursor: pointer;
@@ -183,26 +185,126 @@
   transition-duration: 0.3s;
 }
 
+/* REGISTER */
+
+.main-register {
+  height: 100%;
+  background: var(--black-void-lighter) url("../img/man-watching.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3.5%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: end;
+}
+
+.form-register {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  padding: 2% 5%;
+  margin: 10% 0;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--black-void-blur-2);
+  border-radius: 40px;
+  border: 2px solid var(--purple);
+  box-shadow: 0 0 1.5rem var(--black-void);
+}
+
+.form-register h1 {
+  margin-top: 8%;
+  color: var(--purple);
+  font-weight: 300;
+}
+
+.form-register label {
+  color: var(--purple);
+  margin: 5% 0 1% 0;
+  font-size: 20px;
+}
+
+.form-register input,
+.form-register button {
+  max-width: 70%;
+  background-color: transparent;
+  padding: 1.5% 0 1.5% 2%;
+  color: var(--purple);
+  border-radius: 5px;
+}
+
+.form-register input {
+  border: none;
+  outline: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 1px solid var(--purple);
+}
+
+.form-register input::placeholder {
+  color: var(--purple);
+  opacity: 0.7;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.form-register button {
+  border: 1px solid var(--purple);
+  max-width: 50%;
+  margin: 10% 0;
+  box-shadow: 0 0 0.1rem var(--purple);
+  background-color: var(--black-void-blur-2);
+  font-size: 20px;
+}
+
+.form-register input:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 2px -2px var(--blue-neon);
+}
+.form-register button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0.6rem var(--blue-neon);
+}
+
+.form-register input:hover,
+.form-register button:hover,
+.form-register input:not(:hover),
+.form-register button:not(:hover) {
+  transition-duration: 0.3s;
+}
+
+.form-register input::-webkit-outer-spin-button,
+.form-register input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /*  RECOVER PASSWORD */
 
 .container-form-recover {
   height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: flex-start;
-  background-color: var(--black-void);
+  background-color: var(--black-void-lighter);
   color: var(--purple);
   background-image: url(../img/image-recover.jpg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container-form-recover form {
-  background: #0e0b16be;
+  background: var(--black-void-blur);
   border-radius: 15px;
-  box-shadow: #4717f654 5px 5px 5px;
-  border:solid 1px var(--black-void);
+  box-shadow: var(--black-void);
+  border: solid 1px var(--purple);
   width: 100%;
   max-width: 500px;
   margin: 32px auto;
@@ -214,12 +316,16 @@
 
 .container-form-recover form h1 {
   margin-bottom: 32px;
-  color: var(--blue-neon);
+  color: var(--purple);
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 300;
 }
 
 .container-form-recover form p {
   margin-top: 20px;
   font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .input-recover {
@@ -230,68 +336,72 @@
   position: relative;
 }
 
-.input-recover label {
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: bolder;
-}
-
 .input-recover input,
 .button-recover {
   /* reset appeareance */
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-
   /* box */
   width: 100%;
-
   padding: 16px 0;
-
   border: none;
   border-bottom: 1px solid var(--purple);
-
   background-color: transparent;
-
   outline: none;
-
   /* text */
-  color: white;
+  color: var(--purple);
   font-size: 1em;
 }
 
+.input-recover input {
+  padding-bottom: 5px;
+}
+
 .button-recover {
-  background-color: var(--purple);
-  border-radius: 15px;
-  width: 50%;
+  align-self: center;
+  margin-top: 3%;
+  background-color: transparent;
+  width: 70%;
+  border: 1px solid var(--purple);
+  max-width: 70%;
+  background-color: transparent;
+  padding: 1.5% 2%;
+  color: var(--purple);
+  border-radius: 5px;
 }
 
 .input-recover input ~ label {
+  font-size: 18px;
   position: absolute;
   top: 16px;
   left: 0;
-
-  color: rgba(255, 255, 255, 0.6);
-
-  transition: 0.4s;
+  color: var(--purple);
+  transition: 0.3s;
 }
 
 .input-recover input:focus ~ label,
-.input-recover input:valid ~ label {
+.input-recover input:valid ~ label,
+.input-recover input:invalid ~ label {
   transform: translatey(-24px);
   font-size: 0.8em;
   letter-spacing: 0.1em;
 }
 
-.input-recover span.error {
-  display: flex;
-  padding: 0;
-  background-color: #4717f649;
+.button-recover:hover {
+  box-shadow: 0 0 0.5rem var(--purple);
+  border-color: var(--blue-neon);
 }
 
-.input-recover span.error.active {
-  border: 1px solid #4717f649;
-  border-radius: 5px;
-  padding: 0.4em;
+.input-recover input:hover {
+  border-bottom-color: var(--blue-neon);
+}
+
+.button-recover:hover,
+.button-recover:not(:hover),
+.input-recover input:hover,
+.input-recover input:not(:hover) {
+  transition-duration: 0.2s;
 }
 
 /* SEARCH */
@@ -299,47 +409,72 @@
 .container-search {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  padding-top: 125px;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
-  color:var(--purple);
-  background-color: var(--black-void);
+  color: var(--purple);
+  background-color: var(--black-void-lighter);
 }
 
-.container-search h2 {
-  margin-right: 50px;
+.container-search h1 {
+  font-weight: 300;
 }
 
-.input-search, .button-search {
+.input-search {
+  max-width: 40%;
   display: flex;
   justify-content: center;
-  margin: 10px;
-  flex-direction: row;
-  align-items: center;
+  align-items: baseline;
+  margin-top: 50px;
+  color: var(--purple);
 }
 
 .input-search input {
-  height: 30px;
+  background-color: transparent;
+  border: none;
+  padding: 0 10% 5% 10%;
+  border-bottom: 1px solid var(--purple);
+  color: var(--purple);
+}
+
+.input-search input::placeholder {
+  font-style: italic;
+  color: var(--purple);
+  opacity: 0.5;
+}
+
+.input-search input:focus,
+.input-search input:hover {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--blue-neon);
 }
 
 .button-search {
   background-color: transparent;
   border-radius: 100px;
   border: none;
+  margin-left: 15%;
+}
+
+.button-search img:hover {
+  width: 35px;
+}
+
+.button-search img:hover,
+.button-search img:not(:hover) {
+  transition-duration: 0.3s;
 }
 
 .receive-movie {
   display: flex;
-  flex-wrap:  wrap;
-  margin: 0;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 75%;  
+  margin: 100px 0;
+  width: 75%;
 }
 
 .box-movie {
@@ -361,21 +496,37 @@
 }
 
 .container-partner {
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 70%;
   width: 75%;
-  background-color: var(--purple);
+  background-color: var(--black-void);
   border-radius: 15px;
-  box-shadow: 0 0 1rem var(--purple);
+  box-shadow: 0 0 0.5rem var(--purple-blur);
 }
 
 .title-partner {
-  font-size: 30px;
-  color: var(--black-void);
+  font-weight: 300;
+  color: var(--purple);
 }
 
 .partner-logo {
   max-width: 150px;
   max-height: 150px;
+}
+
+.partners-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+  background-color: var(--blue-neon-darker);
+  min-width: 50%;
+  margin: 30px 0;
+  border-radius: 10px;
+  align-self: center;
 }
 
 .partner-logo:hover {
@@ -400,6 +551,7 @@
   height: 100%;
   background: var(--black-void);
   border-radius: 15px;
+  box-shadow: 0 0 0.5rem var(--purple-blur);
 }
 
 .section-contact h1 {
@@ -423,7 +575,7 @@
 }
 
 .img-contact {
-  background-color: #4717f66c;
+  background-color: var(--blue-neon-darker);
   max-width: 215px;
   opacity: 1;
   border-radius: 15px;
@@ -457,10 +609,16 @@
 }
 
 .section-details {
-  background-color: var(--purple);
+  background-color: var(--black-void);
   border-radius: 15px;
-  box-shadow: 0 0 1rem var(--purple);
   width: 80%;
+  box-shadow: 0 0 0.5rem var(--purple-blur);
+}
+
+.title-details {
+  font-weight: 300;
+  color: var(--purple);
+  margin-top: 5%;
 }
 
 .img-details-container {
@@ -468,16 +626,20 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background-color: var(--purple-blur);
+  width: 80%;
+  align-self: center;
+  margin-bottom: 30px;
+  border-radius: 10px;
 }
 
 .img-details {
-  max-width: 80%;
+  max-width: 300px;
 }
-
 
 /* SUGGESTIONS */
 
-.container-form {
+.container-suggestions-form {
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -488,12 +650,13 @@
   color: var(--purple);
   background-image: url(../img/fundo-suggestion.png);
   background-repeat: no-repeat;
+  margin-top: 50px;
   background-size: 50%;
   background-position-x: right;
   background-position-y: bottom;
 }
 
-.container-form form {
+.container-suggestions-form form {
   background: #0e0b16be;
   border-radius: 15px;
   box-shadow: 5px 5px 5px var(--black-void);
@@ -506,14 +669,14 @@
   flex-direction: column;
 }
 
-.container-form form h1 {
+.container-suggestions-form form h1 {
   margin: 0;
   margin-bottom: 10%;
   color: var(--purple);
   font-weight: 300;
 }
 
-.input-validation {
+.input-suggestions-form {
   margin-bottom: 24px;
   position: relative;
 }
@@ -538,7 +701,7 @@
   padding: 15px;
 }
 
-.input-validation input,
+.input-suggestions-form input,
 .button-suggestion {
   /* reset appeareance */
   -moz-appearance: none;
@@ -569,7 +732,7 @@
   border-radius: 5px;
 }
 
-.input-validation input ~ label {
+.input-suggestions-form input ~ label {
   font-size: 18px;
   position: absolute;
   top: 16px;
@@ -578,41 +741,29 @@
   transition: 0.4s;
 }
 
-.input-validation input:focus ~ label,
-.input-validation input:valid ~ label {
+.input-suggestions-form input:focus ~ label,
+.input-suggestions-form input:valid ~ label,
+.input-suggestions-form input:invalid ~ label {
   transform: translatey(-24px);
   font-size: 0.8em;
   letter-spacing: 0.1em;
 }
 
-.input-validation span.error {
-  display: flex;
-  padding: 0;
-  background-color: #4717f649;
-}
-
-.input-validation span.error.active {
-  border: 1px solid #4717f649;
-  border-radius: 5px;
-  padding: 0.4em;
-}
-
 .button-suggestion:hover,
 .input-suggestion textarea:hover {
-  box-shadow: 0 0 0.5rem var(--purple);
-  border-color: var(--blue-neon);
+  box-shadow: 0 0 0.5rem var(--blue-neon);
 }
 
-.input-validation input:hover {
-  border-bottom-color: var(--blue-neon);
+.input-suggestions-form input:hover {
+  box-shadow: 0 4px 2px -2px var(--blue-neon);
 }
 
 .button-suggestion:hover,
 .input-suggestion textarea:hover,
 .button-suggestion:not(:hover),
 .input-suggestion textarea:not(:hover),
-.input-validation input:hover,
-.input-validation input:not(:hover) {
+.input-suggestions-form input:hover,
+.input-suggestions-form input:not(:hover) {
   transition-duration: 0.2s;
 }
 
@@ -707,11 +858,27 @@
     margin: 50px 0;
   }
 
+  /* REGISTER */
+  .main-register {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  .form-register {
+    margin-top: 25%;
+    width: 100%;
+  }
+
   /* SUGGESTIONS */
   .container-form {
     background-position-x: center;
     background-position-y: bottom;
     background-size: 70%;
   }
-}
 
+  /* DETAILS */
+  .img-details {
+    max-width: 200px;
+  }
+}
