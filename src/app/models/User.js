@@ -16,6 +16,34 @@ class User {
     this._street = street;
   }
 
+  getName() {
+    return this._name;
+  }
+
+  getEmail() {
+    return this._email;
+  }
+
+  getPassword() {
+    return this._password;
+  }
+
+  getRG() {
+    return this._rg;
+  }
+
+  getCep() {
+    return this._cep;
+  }
+
+  getNumber() {
+    return this._number;
+  }
+
+  getSupp() {
+    return this._supp;
+  }
+
   getState() {
     return this._state;
   }

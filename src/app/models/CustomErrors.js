@@ -11,10 +11,6 @@ class CustomErrors {
   userNotDefined = "Usuário não existe";
   emailSuccess =
     "O e-mail foi enviado com sucesso. Verifique sua caixa de entrada";
-
-  /* mensagem falando que email foi - recuperar senha */
 }
 
-/* var erro = new CustomErrors();
-console.log(erro.checkErrorInvalidPassword("aaaa"));
-console.log(erro.checkErrorInvalidPassword("aA1aaaaaaa ")); */
+export default CustomErrors;
