@@ -1,19 +1,22 @@
 class User {
-  constructor(name, email, password, rg, cep, number, supp) {
+  constructor(name, email, password, rg, cep) {
     this._name = name;
     this._email = email;
     this._password = password;
     this._rg = rg;
     this._cep = cep;
-    this._number = number;
-    this._supp = supp;
   }
 
-  setLocation(state, city, neighborhood, street) {
+  setLocation(state, city, neighborhood, street, supp) {
     this._state = state;
     this._city = city;
     this._neighborhood = neighborhood;
     this._street = street;
+    this._supp = supp;
+  }
+
+  setNum(number) {
+    this._number = number;
   }
 
   getName() {

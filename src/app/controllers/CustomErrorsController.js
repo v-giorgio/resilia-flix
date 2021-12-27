@@ -5,8 +5,8 @@ class CustomErrorsController {
   }
 
   checkErrorOnlyString(input) {
-    if (typeof input === String) return true;
-    else return false;
+    if (/\d/.test(input)) return false;
+    else return true;
   }
 
   checkErrorInvalidEmail(input) {
@@ -54,3 +54,5 @@ class CustomErrorsController {
     else return false;
   }
 }
+
+export default CustomErrorsController;

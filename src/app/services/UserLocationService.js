@@ -1,4 +1,7 @@
+import CustomErrors from "../models/CustomErrors.js";
+
 class UserLocationService {
+  errorsCheck = new CustomErrors();
   /* API CEP request */
   findByCEP(cep, user) {
     $.ajax({
@@ -6,15 +9,17 @@ class UserLocationService {
       url: `https://viacep.com.br/ws/${cep}/json/`,
       success: (response) => {
         try {
-          console.log(response);
+          //console.log(response);
           user.setLocation(
             response.uf,
             response.localidade,
             response.bairro,
-            response.logradouro
+            response.logradouro,
+            response.complemento
           );
         } catch (err) {
           console.log(err);
+          throw new Error(this.errorsCheck.apiError);
         }
       },
       error: (xhr, thrownError) => {
