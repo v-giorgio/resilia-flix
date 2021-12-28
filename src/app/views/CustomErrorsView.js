@@ -41,7 +41,7 @@ class CustomErrorsView {
   }
   userAlreadyDefined(span) {
     span.innerHTML = `
-        <p>${this.errorsList.userAlreadyDefined}</p>
+        <p class="error">${this.errorsList.userAlreadyDefined}</p>
         `;
   }
   userNotDefined(span) {
@@ -65,10 +65,23 @@ class CustomErrorsView {
         <p class="validation">${this.errorsList.emailSuccess}</p>
         `;
   }
+
   registerSuccess(span) {
     span.innerHTML = `
         <p class="validation">${this.errorsList.registerSuccess}</p>
         `;
+  }
+
+  loginSuccess(span) {
+    span.innerHTML = `
+        <p class="validation">${this.errorsList.loginSuccess}</p>
+        `;
+  }
+
+  loginError(span) {
+    span.innerHTML = `
+    <p class="error">${this.errorsList.loginError}</p>
+    `;
   }
 
   clear(span) {
