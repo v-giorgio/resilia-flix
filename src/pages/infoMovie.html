@@ -8,7 +8,7 @@
     <title>ResiliaFlix - Mais informações</title>
 
     <!-- CSS-->
-    <link rel="stylesheet" href="/src/assets/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -20,42 +20,110 @@
 
 <body>
 
-   
-        <section class="fatherDiv">
-            <div class="containerBig">
-                <div class="secPoster">
-                    <img class="posterInfo" src="https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SX300.jpg" alt="poster">
-                </div>
-                <div class="movieDiv">
-                    <div class="boxTitle">
-                        <h3 id="titleMovie"> GET OUT</h3>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-color shadow-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html"><img class="logo-style" width="200"
+                        src="../assets/img/logo.png" alt="Logo" /></a>
+                <button class="navbar-toggler button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav navbar-item">
+                        <a class="nav-link" id="navbar-text-color" aria-current="page" href="../../index.html">Home</a>
+                        <a class="nav-link" id="navbar-text-color" href="#">Entrar</a>
+                        <a class="nav-link" href="./searchMovie.html"><img class="icon-style" width="30" height="30"
+                                src="../assets/img/lupa-icon.png" alt="Buscar" /></a>
                     </div>
-                    <h2 id="watch">Assistir</h2>
-                </div>    
-            </div>  
-            
-            <div class="boxInfos">
-                <section class="infoRow">
-                    <p>AVALIAÇÃO</p>
-                    <p>ANO DE ESTREIA:</p>
-                    <p>DURAÇÃO</p>
-                </section>
-                <section class="sinopse">
-                    <p id="sinopseText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nam, repudiandae provident minus in eum consequatur, dolore non impedit dolores, qui error quis ratione tempora nihil laudantium enim esse veritatis.</p>
-                
-            </section>
-    
-    
+                </div>
             </div>
-        </section>
+        </nav>
+    </header>
 
-  
-    
-    
+    <!-- MAIN INFO -->
+    <section class="fatherDiv">
+        <div class="containerBig">
+            <div class="secPoster">
+                <img class="posterInfo"
+                    src="https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SX300.jpg"
+                    alt="poster">
+            </div>
+            <div class="movieDiv">
+                <div class="boxTitle">
+                    <h3 id="titleMovie"> GET OUT</h3>
+                </div>
+                <h2 id="watch">Assistir</h2>
+            </div>
+        </div>
 
+        <div class="boxInfos">
+            <section class="infoRow">
+                <p>AVALIAÇÃO</p>
+                <p>ANO DE ESTREIA:</p>
+                <p>DURAÇÃO</p>
+            </section>
+            <section class="sinopse">
+                <p id="sinopseText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nam, repudiandae
+                    provident minus in eum consequatur, dolore non impedit dolores, qui error quis ratione tempora nihil
+                    laudantium enim esse veritatis.</p>
 
+            </section>
+        </div>
+    </section>
 
+    <!-- FOOTER -->
+    <footer class="footer position-relative-bottom">
+        <div class="container">
+            <div class="row">
+                <!-- Details Footer -->
+                <div class="col-md-3 col-sm-12 item justify-content-center">
+                    <h3>Detalhes</h3>
+                    <ul>
+                        <li><a href="./details.html">Especificações</a></li>
+                        <li><a href="./partners.html">Parceiros</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Footer -->
+                <div class="col-md-3 col-sm-12 item justify-content-center">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="./contact.html">Equipe</a></li>
+                        <li><a href="./suggestions.html">Sugestão</a></li>
+                    </ul>
+                </div>
+                <!-- About Footer -->
+                <div class="col-md-6 item text">
+                    <h3>Sobre</h3>
+                    <p>Serviço de streaming de filmes e séries dirigidos, produzidos e protagonizados por pessoas
+                        negras.</p>
+                </div>
+            </div>
 
+            <div class="container col item icons container flex justify-content-center">
+                <!-- Footer Icons -->
+                <section class="col item-icon icons">
+                    <a href="https://www.linkedin.com/school/resilia-educacao" target="_blank"><i
+                            class="fab fa-linkedin" style='font-size:36px'></i></a>
+                    <a href="https://www.facebook.com/resilia.br" target="_blank"><i class="fa fa-facebook-square"
+                            style="font-size:36px"></i></a>
+                    <a href="https://www.instagram.com/resilia.br/" target="_blank"><i class="fa fa-instagram"
+                            style="font-size:36px"></i></a>
+                    <a href="https://github.com/v-giorgio/resilia-flix" target="_blank"><i class="fa fa-github"
+                            style="font-size:36px"></i></a>
+                </section>
+
+                <div class="container d-flex justify-content-center">
+                    <a href="../../index.html"><img class="logo" width="250" src="../assets/img/logo.png"></a>
+                </div>
+
+                <p class="copyright">&copy;2021 - All rights reserved</p>
+            </div>
+
+        </div>
+    </footer>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

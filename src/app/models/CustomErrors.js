@@ -14,6 +14,8 @@ class CustomErrors {
   emailSuccess =
     "O e-mail foi enviado com sucesso. Verifique sua caixa de entrada";
   registerSuccess = "A conta foi criada com sucesso";
+  loginSuccess = "Login realizado com sucesso!";
+  loginError = "Dados inválidos. Verifique se o e-mail ou senha estão corretos";
 }
 
 export default CustomErrors;

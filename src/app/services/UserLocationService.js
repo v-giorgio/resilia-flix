@@ -9,11 +9,11 @@ class UserLocationService {
       url: `https://viacep.com.br/ws/${cep}/json/`,
       success: (response) => {
         try {
-          console.log(response);
+          //console.log(response);
           this.setUserLocation(response, user);
           return true;
         } catch (err) {
-          console.log(err);
+          //console.log(err);
           return false;
         }
       },
