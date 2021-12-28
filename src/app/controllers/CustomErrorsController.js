@@ -5,8 +5,8 @@ class CustomErrorsController {
   }
 
   checkErrorOnlyString(input) {
-    if (typeof input === String) return true;
-    else return false;
+    if (/\d/.test(input)) return false;
+    else return true;
   }
 
   checkErrorInvalidEmail(input) {
@@ -35,12 +35,12 @@ class CustomErrorsController {
   }
 
   checkErrorCepLength(input) {
-    if (input.length === 8) return true;
+    if (input.toString().length == 8) return true;
     else return false;
   }
 
   checkErrorRGLength(input) {
-    if (input.length === 9) return true;
+    if (input.toString().length == 9) return true;
     else return false;
   }
 
@@ -54,3 +54,5 @@ class CustomErrorsController {
     else return false;
   }
 }
+
+export default CustomErrorsController;
