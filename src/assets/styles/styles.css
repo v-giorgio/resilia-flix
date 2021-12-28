@@ -646,16 +646,6 @@
   margin-bottom: 15px;
 }
 
-@media only screen and (max-width: 843px) {
-  .infoRow {
-    display: flex;
-    flex-direction: column;
-  }
-  .containerBig{
-    display: flex;
-    flex-direction: column;
-  }
-
 /* LOGIN */
 
 .main-login {
@@ -1480,5 +1470,16 @@
   /* DETAILS */
   .img-details {
     max-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 843px) {
+  .infoRow {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerBig {
+    display: flex;
+    flex-direction: column;
   }
 }
