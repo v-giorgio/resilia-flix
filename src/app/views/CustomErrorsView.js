@@ -6,37 +6,37 @@ class CustomErrorsView {
   }
   emptyInput(span) {
     span.innerHTML = `
-        <p>${this.errorsList.emptyInput}</p>
+        <p class="error">${this.errorsList.emptyInput}</p>
         `;
   }
   onlyString(span) {
     span.innerHTML = `
-        <p>${this.errorsList.onlyString}</p>
+        <p class="error">${this.errorsList.onlyString}</p>
         `;
   }
   invalidEmail(span) {
     span.innerHTML = `
-        <p>${this.errorsList.invalidEmail}</p>
+        <p class="error">${this.errorsList.invalidEmail}</p>
         `;
   }
   invalidPassword(span) {
     span.innerHTML = `
-        <p>${this.errorsList.invalidPassword}</p>
+        <p class="error">${this.errorsList.invalidPassword}</p>
         `;
   }
   cepLength(span) {
     span.innerHTML = `
-        <p>${this.errorsList.cepLength}</p>
+        <p class="error">${this.errorsList.cepLength}</p>
         `;
   }
   RGLength(span) {
     span.innerHTML = `
-        <p>${this.errorsList.RGLength}</p>
+        <p class="error">${this.errorsList.RGLength}</p>
         `;
   }
   matchingPassword(span) {
     span.innerHTML = `
-        <p>${this.errorsList.matchingPassword}</p>
+        <p class="error">${this.errorsList.matchingPassword}</p>
         `;
   }
   userAlreadyDefined(span) {
@@ -46,7 +46,7 @@ class CustomErrorsView {
   }
   userNotDefined(span) {
     span.innerHTML = `
-        <p>${this.errorsList.userNotDefined}</p>
+        <p class="error">${this.errorsList.userNotDefined}</p>
         `;
   }
   apiError(span) {

@@ -9,6 +9,7 @@
   --blue-neon: #4717f6;
   --black-blur: #282828;
   --blue-neon-darker: #4717f66c;
+  --blue-neon-brighter: #5964f8;
 }
 
 /* LightSlider */
@@ -669,12 +670,13 @@
   padding: 2% 5%;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: var(--black-void-blur);
+  background-color: var(--black-void-blur-2);
   border-radius: 40px;
   border: 2px solid var(--purple);
   box-shadow: 0 0 1.5rem var(--black-void);
   margin-right: 5%;
   contain: content;
+  padding-bottom: 38%;
 }
 
 .form-login h1 {
@@ -722,7 +724,7 @@
 
 .login-forgot-password a:hover,
 .login-register a:hover {
-  color: var(--blue-neon);
+  color: var(--blue-neon-brighter);
   margin-left: 2.2%;
 }
 
@@ -912,6 +914,14 @@
   position: relative;
 }
 
+.input-recover span {
+  font-size: 14px;
+}
+
+.container-form-recover form span {
+  font-size: 14px;
+}
+
 .input-recover input,
 .button-recover {
   /* reset appeareance */
@@ -981,7 +991,6 @@
 }
 
 /* SEARCH */
-
 .container-search {
   display: flex;
   flex-direction: column;
@@ -995,50 +1004,57 @@
 
 .container-search h1 {
   font-weight: 300;
-  font-weight: bolder;
 }
 
-.search-box{
+.search-box {
   display: flex;
   align-items: center;
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #2f3640;
-  height:50px;
+  background: var(--black-void);
+  height: 50px;
   border-radius: 40px;
   padding: 10px;
 }
-.search-box:hover > .search-txt{
+
+.search-box:hover > .search-txt {
   width: 240px;
   padding: 0 6px;
 }
 
-.search-btn{
-  color:#e84118;
+.search-btn {
+  color: var(--purple);
   float: right;
   width: 40px;
-  height:50px;
+  height: 50px;
   border-radius: 50%;
-  background: #2f3640;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.4s;
+  text-decoration: none;
 }
 
-.search-txt{
-  border:none;
+.search-txt {
+  border: none;
   background: none;
   outline: none;
   float: left;
   padding: 0;
-  color: white;
+  color: var(--purple);
+  opacity: 0.8;
   font-size: 16px;
   transition: 0.4s;
   line-height: 40px;
   width: 0px;
+}
+
+.search-txt::placeholder {
+  color: var(--purple);
+  opacity: 0.5;
 }
 
 .receive-movie {
@@ -1055,7 +1071,6 @@
   width: 200px;
   height: 200px;
   margin: 20px;
- 
 }
 
 /* PARTNERS */
@@ -1422,8 +1437,8 @@
 
 .error {
   color: red;
+  margin: 0;
   opacity: 0.6;
-  margin: 5px 0 0 5px;
 }
 
 .validation {
@@ -1435,17 +1450,6 @@
 /* MEDIA QUERIES */
 
 @media (max-width: 700px) {
-  /* LOGIN */
-  .main-login {
-    align-items: center;
-  }
-  .form-login {
-    width: 90%;
-  }
-  .form-login button {
-    margin: 50px 0;
-  }
-
   /* REGISTER */
   .main-register {
     background-repeat: no-repeat;
@@ -1472,10 +1476,28 @@
 }
 
 @media only screen and (max-width: 843px) {
+  /* LOGIN */
+  .main-login {
+    align-items: center;
+  }
+
+  .form-login {
+    margin: 25% 0;
+    width: 90%;
+    height: 90%;
+  }
+
+  .form-login button {
+    margin: 50px 0;
+  }
+
+  /* INFO */
+
   .infoRow {
     display: flex;
     flex-direction: column;
   }
+
   .containerBig {
     display: flex;
     flex-direction: column;

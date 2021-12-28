@@ -36,6 +36,7 @@ class LoginController {
 
     this._loginBtn.addEventListener("click", (event) => {
       event.preventDefault();
+      this._msgValidation.innerHTML = "";
       /* check if inputs are blank */
       if (
         this.checkEmail(this._inputEmail.value) &&
