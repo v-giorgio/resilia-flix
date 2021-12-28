@@ -138,6 +138,7 @@ class RegisterController {
 
     this._registerBtn.addEventListener("click", (event) => {
       event.preventDefault();
+      this._msgRegisterValidation.innerHTML = "";
       if (
         this.checkName(this._inputName.value) &&
         this.checkEmail(this._inputEmail.value) &&
