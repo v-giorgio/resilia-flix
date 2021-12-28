@@ -1,5 +1,6 @@
 class CustomErrors {
   emptyInput = "Campo obrigatório";
+  manyEmptyInputs = "Preencha os campos obrigatórios";
   onlyString = "Use apenas letras nesse campo";
   invalidEmail = "E-mail com formato inválido";
   invalidPassword =
@@ -12,6 +13,7 @@ class CustomErrors {
   apiError = "Erro na requisição de dados.";
   emailSuccess =
     "O e-mail foi enviado com sucesso. Verifique sua caixa de entrada";
+  registerSuccess = "A conta foi criada com sucesso";
 }
 
 export default CustomErrors;

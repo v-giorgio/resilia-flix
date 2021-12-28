@@ -35,12 +35,12 @@ class CustomErrorsController {
   }
 
   checkErrorCepLength(input) {
-    if (input.length === 8) return true;
+    if (input.toString().length == 8) return true;
     else return false;
   }
 
   checkErrorRGLength(input) {
-    if (input.length === 9) return true;
+    if (input.toString().length == 9) return true;
     else return false;
   }
 

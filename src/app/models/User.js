@@ -5,6 +5,12 @@ class User {
     this._password = password;
     this._rg = rg;
     this._cep = cep;
+    this._state = "";
+    this._city = "";
+    this._neighborhood = "";
+    this._street = "";
+    this._supp = "";
+    this._num = "";
   }
 
   setLocation(state, city, neighborhood, street, supp) {

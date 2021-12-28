@@ -9,23 +9,29 @@ class UserLocationService {
       url: `https://viacep.com.br/ws/${cep}/json/`,
       success: (response) => {
         try {
-          //console.log(response);
-          user.setLocation(
-            response.uf,
-            response.localidade,
-            response.bairro,
-            response.logradouro,
-            response.complemento
-          );
+          console.log(response);
+          this.setUserLocation(response, user);
+          return true;
         } catch (err) {
           console.log(err);
-          throw new Error(this.errorsCheck.apiError);
+          return false;
         }
       },
       error: (xhr, thrownError) => {
         console.log(xhr, thrownError);
       },
     });
+  }
+
+  setUserLocation(response, user) {
+    console.log(response.uf);
+    user.setLocation(
+      response.uf,
+      response.localidade,
+      response.bairro,
+      response.logradouro,
+      response.complemento
+    );
   }
 }
 
