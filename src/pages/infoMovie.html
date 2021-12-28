@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,15 +14,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- BOOTSTRAP -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-  </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
 
-  <body>
+<body>
     <!-- NAVBAR -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-color shadow-navbar">
@@ -46,35 +43,42 @@
     </header>
 
     <!-- MAIN INFO -->
-    <section class="fatherDiv">
-        <div class="containerBig">
-            <div class="secPoster">
-                <img class="posterInfo"
-                    src="https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SX300.jpg"
-                    alt="poster">
-            </div>
-            <div class="movieDiv">
-                <div class="boxTitle">
-                    <h3 id="titleMovie"> GET OUT</h3>
+    <main class="main-infoFilme">
+        <section class="container">
+            <div class="row">
+                <div class="containerBig">
+                    <div class="secPoster  col-md-3 col-sm-12 justify-content-center">
+                        <img class="posterInfo"
+                            src="https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_SX300.jpg"
+                            alt="poster" />
+                    </div>
+                    <div class="movieDiv">
+                        <div class="boxTitle row">
+                            <h3 id="titleMovie">GET OUT</h3>
+                        </div>
+                        <h4 id="watch"> <img width="30px" src="../assets/img/play-icon.png" alt="Play Icon" srcset="">
+                            Assistir</h4>
+                    </div>
                 </div>
-                <h2 id="watch">Assistir</h2>
+
+                <div class="boxInfos">
+                    <section class="infoRow">
+                        <p>AVALIAÇÃO:</p>
+                        <p>ANO DE ESTREIA:</p>
+                        <p>DURAÇÃO:</p>
+                    </section>
+                    <section class="sinopse">
+                        <p id="sinopseText">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nam,
+                            repudiandae provident minus in eum consequatur, dolore non impedit
+                            dolores, qui error quis ratione tempora nihil laudantium enim esse
+                            veritatis.
+                        </p>
+                    </section>
+                </div>
             </div>
-        </div>
-
-        <div class="boxInfos">
-            <section class="infoRow">
-                <p>AVALIAÇÃO</p>
-                <p>ANO DE ESTREIA:</p>
-                <p>DURAÇÃO</p>
-            </section>
-            <section class="sinopse">
-                <p id="sinopseText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nam, repudiandae
-                    provident minus in eum consequatur, dolore non impedit dolores, qui error quis ratione tempora nihil
-                    laudantium enim esse veritatis.</p>
-
-            </section>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer position-relative-bottom">
@@ -128,16 +132,13 @@
     </footer>
 
     <!-- Bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
     <script type="module" src=""></script>
-  </body>
+</body>
+
 </html>
