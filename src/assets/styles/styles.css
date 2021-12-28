@@ -15,7 +15,7 @@
 /*! lightslider - v1.1.3 - 2015-04-14
 * https://github.com/sachinchoolur/lightslider
 * Copyright (c) 2015 Sachin N; Licensed MIT */
-/** /!!! core css Should not edit !!!/**/ 
+/** /!!! core css Should not edit !!!/**/
 
 .lSSlideOuter {
   overflow: hidden;
@@ -24,9 +24,10 @@
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none
+  user-select: none;
 }
-.lightSlider:before, .lightSlider:after {
+.lightSlider:before,
+.lightSlider:after {
   content: " ";
   display: table;
 }
@@ -47,10 +48,10 @@
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   -webkit-transition: all 1s;
-  transition:all 1s; 
-  -webkit-transition-property: -webkit-transform,height;
-  -moz-transition-property: -moz-transform,height;
-  transition-property: transform,height;
+  transition: all 1s;
+  -webkit-transition-property: -webkit-transform, height;
+  -moz-transition-property: -moz-transform, height;
+  transition-property: transform, height;
   -webkit-transition-duration: inherit !important;
   transition-duration: inherit !important;
   -webkit-transition-timing-function: inherit !important;
@@ -91,8 +92,7 @@
   margin: 10px 0 0;
   padding: 0;
   text-align: center;
-display: none;
-
+  display: none;
 }
 .lSSlideOuter .lSPager.lSpg > li {
   cursor: pointer;
@@ -112,7 +112,8 @@ display: none;
   -webkit-transition: all 0.5s linear 0s;
   transition: all 0.5s linear 0s;
 }
-.lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
+.lSSlideOuter .lSPager.lSpg > li:hover a,
+.lSSlideOuter .lSPager.lSpg > li.active a {
   background-color: #428bca;
 }
 .lSSlideOuter .media {
@@ -135,7 +136,7 @@ display: none;
   -webkit-transform: translate3d(0px, 0px, 0px);
   -o-transform: translate3d(0px, 0px, 0px);
   -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform ;
+  transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -149,7 +150,8 @@ display: none;
   -webkit-transition: border-radius 0.12s linear 0s 0.35s linear 0s;
   transition: border-radius 0.12s linear 0s 0.35s linear 0s;
 }
-.lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover {
+.lSSlideOuter .lSPager.lSGallery li.active,
+.lSSlideOuter .lSPager.lSGallery li:hover {
   border-radius: 5px;
 }
 .lSSlideOuter .lSPager.lSGallery img {
@@ -157,7 +159,8 @@ display: none;
   height: auto;
   max-width: 100%;
 }
-.lSSlideOuter .lSPager.lSGallery:before, .lSSlideOuter .lSPager.lSGallery:after {
+.lSSlideOuter .lSPager.lSGallery:before,
+.lSSlideOuter .lSPager.lSGallery:after {
   content: " ";
   display: table;
 }
@@ -172,7 +175,7 @@ display: none;
   display: block;
   top: 50%;
   height: 32px;
-  background-image: url('../img/controls.png');
+  background-image: url("../img/controls.png");
   cursor: pointer;
   position: absolute;
   z-index: 99;
@@ -201,7 +204,6 @@ display: none;
   filter: alpha(opacity=0);
   overflow: hidden;
 }
-
 
 /* vertical */
 .lSSlideOuter.vertical {
@@ -238,128 +240,131 @@ display: none;
 }
 /* vertical */
 
-
 /* Rtl */
 .lSSlideOuter.lSrtl {
   direction: rtl;
 }
-.lSSlideOuter .lightSlider, .lSSlideOuter .lSPager {
+.lSSlideOuter .lightSlider,
+.lSSlideOuter .lSPager {
   padding-left: 0;
   list-style: none outside none;
 }
-.lSSlideOuter.lSrtl .lightSlider, .lSSlideOuter.lSrtl .lSPager {
+.lSSlideOuter.lSrtl .lightSlider,
+.lSSlideOuter.lSrtl .lSPager {
   padding-right: 0;
 }
-.lSSlideOuter .lightSlider > *,  .lSSlideOuter .lSGallery li {
+.lSSlideOuter .lightSlider > *,
+.lSSlideOuter .lSGallery li {
   float: left;
 }
-.lSSlideOuter.lSrtl .lightSlider > *,  .lSSlideOuter.lSrtl .lSGallery li {
+.lSSlideOuter.lSrtl .lightSlider > *,
+.lSSlideOuter.lSrtl .lSGallery li {
   float: right !important;
 }
 /* Rtl */
 
 @-webkit-keyframes rightEnd {
   0% {
-      left: 0;
+    left: 0;
   }
 
   50% {
-      left: -15px;
+    left: -15px;
   }
 
   100% {
-      left: 0;
+    left: 0;
   }
 }
 @keyframes rightEnd {
   0% {
-      left: 0;
+    left: 0;
   }
 
   50% {
-      left: -15px;
+    left: -15px;
   }
 
   100% {
-      left: 0;
+    left: 0;
   }
 }
 @-webkit-keyframes topEnd {
   0% {
-      top: 0;
+    top: 0;
   }
 
   50% {
-      top: -15px;
+    top: -15px;
   }
 
   100% {
-      top: 0;
+    top: 0;
   }
 }
 @keyframes topEnd {
   0% {
-      top: 0;
+    top: 0;
   }
 
   50% {
-      top: -15px;
+    top: -15px;
   }
 
   100% {
-      top: 0;
+    top: 0;
   }
 }
 @-webkit-keyframes leftEnd {
   0% {
-      left: 0;
+    left: 0;
   }
 
   50% {
-      left: 15px;
+    left: 15px;
   }
 
   100% {
-      left: 0;
+    left: 0;
   }
 }
 @keyframes leftEnd {
   0% {
-      left: 0;
+    left: 0;
   }
 
   50% {
-      left: 15px;
+    left: 15px;
   }
 
   100% {
-      left: 0;
+    left: 0;
   }
 }
 @-webkit-keyframes bottomEnd {
   0% {
-      bottom: 0;
+    bottom: 0;
   }
 
   50% {
-      bottom: -15px;
+    bottom: -15px;
   }
 
   100% {
-      bottom: 0;
+    bottom: 0;
   }
 }
 @keyframes bottomEnd {
   0% {
-      bottom: 0;
+    bottom: 0;
   }
 
   50% {
-      bottom: -15px;
+    bottom: -15px;
   }
 
   100% {
-      bottom: 0;
+    bottom: 0;
   }
 }
 .lSSlideOuter .rightEnd {
@@ -394,25 +399,20 @@ display: none;
 }
 /*/  GRab cursor */
 .lightSlider.lsGrab > * {
-cursor: -webkit-grab;
-cursor: -moz-grab;
-cursor: -o-grab;
-cursor: -ms-grab;
-cursor: grab;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
 }
 .lightSlider.lsGrabbing > * {
-cursor: move;
-cursor: -webkit-grabbing;
-cursor: -moz-grabbing;
-cursor: -o-grabbing;
-cursor: -ms-grabbing;
-cursor: grabbing;
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: grabbing;
 }
-
-
-
-
-
 
 /* SCROLLBAR */
 
@@ -474,211 +474,176 @@ cursor: grabbing;
 }
 /* HOME */
 
-
 /* CSS Document */
-.sectionHomeGlobal{
-	margin:0px;
-	padding: 0px;
-	background-color: #0E0B16;
+.sectionHomeGlobal {
+  margin: 0px;
+  padding: 0px;
+  background-color: #0e0b16;
 }
-.hoverFx a{
-	text-decoration:none;
+.hoverFx a {
+  text-decoration: none;
 }
-.box{
-	width:300px;
-	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
-	border-radius: 10px;
-	overflow: hidden;
-	margin: 25px;
+.box {
+  width: 300px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 25px;
 }
-.slide-img{
-	height: 450px;
-	position:relative;
+.slide-img {
+  height: 450px;
+  position: relative;
 }
-.slide-img img{
-	width:100%;
-	height: 100%;
-	object-fit: cover;
-	box-sizing: border-box;
-}
-
-
-.hoverFx{
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	width:100%;
-	height: 100%;
-	background-color: rgba(162, 57, 202, 0.4);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.infoBtn{
-	width:160px;
-	height: 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #FFFFFF;
-	color:#252525;
-	font-weight: 700;
-	letter-spacing: 1px;
-	font-family: calibri;
-	border-radius: 20px;
-	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
-}
-.infoBtn:hover{
-	color:#FFFFFF;
-	background-color: #f15fa3;
-	transition: all ease 0.3s;
-}
-.hoverFx{
-	visibility: hidden;
-}
-.slide-img:hover .hoverFx{
-	visibility: visible;
-	animation:fade 0.5s;
-}
- 
-@keyframes fade{
-	0%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 1;
-	}
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
 }
 
-
- #carroselUm{
-    width: 100vw;
-    height: 75vh;
+.hoverFx {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(162, 57, 202, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#carroselDois{
-    width: 100vw;
-    height: 75vh;
+.infoBtn {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #252525;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: calibri;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
 }
-
-#carroselTres{
-    width: 100vw;
-    height: 75vh;
+.infoBtn:hover {
+  color: #ffffff;
+  background-color: #f15fa3;
+  transition: all ease 0.3s;
 }
-
-.carousel{
-    margin-bottom: 40px;
+.hoverFx {
+  visibility: hidden;
 }
-
-
-.subtitle{
-    margin-left: 1.5vw;
-    color: #A239CA;
-}
-
-
-
-/* INFOS-FILME */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap');
-
-html{
-    font-family: 'Poppins', sans-serif;
-    
-}
-
-
-.containerBig{
-    display: flex;
-    height: 50vh;
-}
-.secPoster{
-    width: 40vw;
-    height: 60vh;
-    margin-right: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.movieDiv{
-    
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.infoBox1{
-    display: inline-block;
-}
-.boxTitle{
-    width: 300px;
-    height: 80px;
-    border-radius: 72px;
-    background-color: #A239CA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: lavender;
-    margin-top: 20vh;
-    margin-bottom: 10vh;
-    
+.slide-img:hover .hoverFx {
+  visibility: visible;
+  animation: fade 0.5s;
 }
 
-#titleMovie{
-    font-size: 32px;
-    font-weight: bold;
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-#watch{
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: bolder;
-    color: #A239CA;
-
+#carroselUm {
+  width: 100vw;
+  height: 75vh;
+}
+#carroselDois {
+  width: 100vw;
+  height: 75vh;
 }
 
-.posterInfo{
-    margin-top: 4.4vh;
-    width: 325px;
-    height: 505px;
-    border: 2px solid green;
+#carroselTres {
+  width: 100vw;
+  height: 75vh;
 }
 
-.boxInfos{
-    background-color: #A239CA;
-    margin-top: 180px;
-    width: 50vw;
-    height: fit-content;
-    border-radius: 40px;
-    padding: 15px;
-    margin-left: 40px;
-    
+.carousel {
+  margin-bottom: 40px;
 }
 
-.fatherDiv{
-    background-color: var(--black-void);
-    height: 100vh;
-    width: 100vw;
+.subtitle {
+  margin-left: 1.5vw;
+  color: #a239ca;
+}
+
+/* INFO-FILM AND SERIES */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap");
+
+.main-infoFilme {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  width: 100%;
+  background: var(--black-void);
+  box-sizing: border-box;
+  color: white;
+}
+.posterInfo {
+  margin-top: 100px;
+}
+
+.containerBig {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.movieDiv {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.boxTitle h3 {
+  margin-bottom: 40px;
+  font-weight: bolder;
+}
+.movieDiv h4 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  width: 150px;
+  background-color: blueviolet;
+  border: solid black 1px;
+  border-radius: 10px;
+}
+
+.infoRow {
+  padding-left: 10px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-weight: bolder;
+}
+
+.boxInfos {
+  height: fit-content;
+  background-color: blueviolet;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 843px) {
+  .infoRow {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly
-}
-
-.infoRow{
+  }
+  .containerBig{
     display: flex;
-    justify-content: space-around;
-    font-size: 22px;
-    color: white;
+    flex-direction: column;
+  }
 }
-
-#sinopseText{
-    font-size: 18px;
-    color: white;
-    padding: 12px;
-}
-
-
-
 
 /* LOGIN */
 
