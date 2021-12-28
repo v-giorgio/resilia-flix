@@ -995,52 +995,50 @@
 
 .container-search h1 {
   font-weight: 300;
+  font-weight: bolder;
 }
 
-.input-search {
-  max-width: 40%;
+.search-box{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height:50px;
+  border-radius: 40px;
+  padding: 10px;
+}
+.search-box:hover > .search-txt{
+  width: 240px;
+  padding: 0 6px;
+}
+
+.search-btn{
+  color:#e84118;
+  float: right;
+  width: 40px;
+  height:50px;
+  border-radius: 50%;
+  background: #2f3640;
   display: flex;
   justify-content: center;
-  align-items: baseline;
-  margin-top: 50px;
-  color: var(--purple);
+  align-items: center;
+  transition: 0.4s;
 }
 
-.input-search input {
-  background-color: transparent;
-  border: none;
-  padding: 0 10% 5% 10%;
-  border-bottom: 1px solid var(--purple);
-  color: var(--purple);
-}
-
-.input-search input::placeholder {
-  font-style: italic;
-  color: var(--purple);
-  opacity: 0.5;
-}
-
-.input-search input:focus,
-.input-search input:hover {
-  border: none;
+.search-txt{
+  border:none;
+  background: none;
   outline: none;
-  border-bottom: 1px solid var(--blue-neon);
-}
-
-.button-search {
-  background-color: transparent;
-  border-radius: 100px;
-  border: none;
-  margin-left: 15%;
-}
-
-.button-search img:hover {
-  width: 35px;
-}
-
-.button-search img:hover,
-.button-search img:not(:hover) {
-  transition-duration: 0.3s;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
 }
 
 .receive-movie {
@@ -1057,7 +1055,7 @@
   width: 200px;
   height: 200px;
   margin: 20px;
-  background-color: blueviolet;
+ 
 }
 
 /* PARTNERS */
