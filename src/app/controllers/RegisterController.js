@@ -7,9 +7,6 @@ import UserLocationView from "../views/UserLocationView.js";
 
 class RegisterController {
   constructor() {
-    /* list of already created users */
-    this._userList = [];
-
     /* errors check model and controller */
     this.errorCheck = new CustomErrorsController();
     this.errorCheckMessage = new CustomErrors();
@@ -84,13 +81,7 @@ class RegisterController {
       this.checkRg(this._inputRG.value.replace(".", ""));
     });
 
-    let user = new User(
-      this._inputName.value,
-      this._inputEmail.value,
-      this._inputPassword.value,
-      this._inputPassword.value,
-      this._inputCep.value
-    );
+    let user = new User();
 
     this._inputCep.addEventListener("blur", (event) => {
       event.preventDefault();
@@ -148,13 +139,24 @@ class RegisterController {
     this._registerBtn.addEventListener("click", (event) => {
       event.preventDefault();
       if (
-        user.getName() !== "" &&
-        user.getEmail() !== "" &&
-        user.getPassword() !== "" &&
-        user.getRG() !== "" &&
-        user.getCep() !== "" &&
-        this.checkUserAlreadyCreated(user)
+        this.checkName(this._inputName.value) &&
+        this.checkEmail(this._inputEmail.value) &&
+        this.checkPassword(this._inputPassword.value) &&
+        this.checkRg(this._inputRG.value) &&
+        this.checkCep(this._inputCep.value) &&
+        this.checkState(this._inputState.value) &&
+        this.checkCity(this._inputCity.value) &&
+        this.checkNeighborhood(this._inputNeighborhood.value) &&
+        this.checkStreet(this._inputStreet.value) &&
+        this.checkSupp(this._inputSupp.value)
       ) {
+        user.setData(
+          this._inputName.value,
+          this._inputEmail.value,
+          this._inputPassword.value,
+          this._inputRG.value,
+          this._inputCep.value
+        );
         if (
           user.getState() == "" ||
           user.getCity() == "" ||
@@ -170,8 +172,38 @@ class RegisterController {
             this._inputSupp.value
           );
         }
-        this._userList.push(user);
-        //console.log(user);
+        if (!this.checkUserAlreadyCreated(user.getEmail())) {
+          this.errorsListMsg.userAlreadyDefined(this._msgRegisterValidation);
+        } else {
+          try {
+            /* create random Id keys for each item in localStorage */
+            let randomId = Math.ceil(Math.random() * 1000);
+            while (localStorage.getItem(randomId) !== null) {
+              randomId = Math.ceil(Math.random() * 1000);
+            }
+            /* create user in LocalStorage with random key and 2 values: email and the User object */
+            localStorage.setItem(randomId, [
+              user.getEmail(),
+              user.getPassword(),
+              user,
+            ]);
+            this._inputName.value = "";
+            this._inputEmail.value = "";
+            this._inputPassword.value = "";
+            this._inputCheckedPassword.value = "";
+            this._inputRG.value = "";
+            this._inputCep.value = "";
+            this._inputState.value = "";
+            this._inputCity.value = "";
+            this._inputNeighborhood.value = "";
+            this._inputStreet.value = "";
+            this._inputSupp.value = "";
+            this._inputNum.value = "";
+            this.errorsListMsg.registerSuccess(this._msgRegisterValidation);
+          } catch (e) {
+            console.log(e);
+          }
+        }
       } else {
         this.errorsListMsg.manyEmptyInputs(this._msgRegisterValidation);
       }
@@ -336,8 +368,8 @@ class RegisterController {
     }
   }
 
-  checkUserAlreadyCreated(user) {
-    if (this.errorCheck.checkErrorUserNotDefined(this._userList, user)) {
+  checkUserAlreadyCreated(userEmail) {
+    if (!this.errorCheck.checkErrorUserNotDefined(userEmail)) {
       this.errorsListMsg.clear(this._msgRegisterValidation);
       this.errorsListMsg.userAlreadyDefined(this._msgRegisterValidation);
       throw new Error(this.errorCheckMessage.userAlreadyDefined);
@@ -353,4 +385,4 @@ class RegisterController {
 }
 
 const register = new RegisterController();
-register.createUser("a", "a", "a", "a", 111, "111", "aaa", 2);
+register.createUser();

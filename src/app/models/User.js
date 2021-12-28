@@ -1,10 +1,10 @@
 class User {
-  constructor(name, email, password, rg, cep) {
-    this._name = name;
-    this._email = email;
-    this._password = password;
-    this._rg = rg;
-    this._cep = cep;
+  constructor() {
+    this._name = "nae";
+    this._email = "";
+    this._password = "";
+    this._rg = "";
+    this._cep = "";
     this._state = "";
     this._city = "";
     this._neighborhood = "";
@@ -19,6 +19,14 @@ class User {
     this._neighborhood = neighborhood;
     this._street = street;
     this._supp = supp;
+  }
+
+  setData(name, email, password, rg, cep) {
+    this._name = name;
+    this._email = email;
+    this._password = password;
+    this._rg = rg;
+    this._cep = cep;
   }
 
   setNum(number) {

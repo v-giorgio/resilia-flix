@@ -49,9 +49,31 @@ class CustomErrorsController {
     else return false;
   }
 
-  checkErrorUserNotDefined(array, user) {
-    if (array.includes(user)) return true;
-    else return false;
+  /* find in the array if there is an user with the same email */
+  checkErrorUserNotDefined(userEmail) {
+    let keys = Object.keys(localStorage);
+    let emailValue = "";
+    for (let i = 0; i < keys.length; i++) {
+      emailValue = localStorage.getItem(keys[i]).split(",");
+      if (emailValue[0] == userEmail) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  checkCorrectLogin(userEmail, userPassword) {
+    let keys = Object.keys(localStorage);
+    let emailValue = "";
+    for (let i = 0; i < keys.length; i++) {
+      emailValue = localStorage.getItem(keys[i]).split(",");
+      if (emailValue[0] == userEmail) {
+        if (emailValue[1] == userPassword) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 }
 
