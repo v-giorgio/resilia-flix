@@ -629,22 +629,47 @@
   border-radius: 10px;
 }
 
+.container-info {
+  display: flex;
+  justify-content: space-around;
+}
+
 .infoRow {
-  padding-left: 10px;
+  width: 100%;
   padding-top: 20px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-evenly;
   font-weight: bolder;
+  background-color: var(--black-void);
+  border-radius: 10px;
 }
 
 .boxInfos {
+  width: 50%;
   height: fit-content;
   background-color: blueviolet;
   border: solid 2px black;
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 15px;
+}
+
+.box-casting {
+  background-color: blueviolet;
+  width: 200px;
+  height: 100%;
+  border: black solid 2px;
+  border-radius: 15px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sectionBox {
+  margin-bottom: 50px;
 }
 
 /* LOGIN */
@@ -1514,5 +1539,20 @@
   /* SEARCH */
   .search-box {
     top: 30%;
+  }
+  .container-info {
+    display: flex;
+    flex-direction: column;
+  }
+  /*  INFO FILM */
+
+  .boxInfos {
+    width: 100%;
+  }
+
+  .main-infoFilme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
