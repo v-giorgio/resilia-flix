@@ -16,6 +16,7 @@ class CustomErrors {
   registerSuccess = "A conta foi criada com sucesso";
   loginSuccess = "Login realizado com sucesso!";
   loginError = "Dados inválidos. Verifique se o e-mail ou senha estão corretos";
+  thankSuggestion = "Agradecemos o seu feedback!";
 }
 
 export default CustomErrors;
