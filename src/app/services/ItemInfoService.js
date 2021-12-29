@@ -1,12 +1,49 @@
+import FilmOrSeries from "../models/FilmOrSeries.js";
+import CarouselHomeView from "../views/CarouselHomeView.js";
+
 class ItemInfoService {
   /* API OMDB request */
-  findByTitle(title) {
+  findByTitle(title, postersTop, postersMovies, postersSeries, i, type) {
     $.ajax({
       method: "GET",
       url: `http://www.omdbapi.com/?apikey=c6f76f28&t=${title}`,
-      success: (response) => {
+      success: function (response) {
         try {
-          this.createItem(response);
+          this.item = new FilmOrSeries(title);
+          this.carouselView = new CarouselHomeView();
+          this.item.setData(
+            response.Type,
+            response.Year,
+            response.Runtime,
+            response.Plot,
+            response.Poster,
+            response.Director,
+            response.imdbRating,
+            response.Actors,
+            response.Genre
+          );
+          switch (type) {
+            case "top":
+              this.carouselView.changeSrc(
+                postersTop[i],
+                this.item.getPosterURL()
+              );
+              break;
+            case "movie":
+              this.carouselView.changeSrc(
+                postersMovies[i],
+                this.item.getPosterURL()
+              );
+              break;
+            case "series":
+              this.carouselView.changeSrc(
+                postersSeries[i],
+                this.item.getPosterURL()
+              );
+              break;
+            default:
+              break;
+          }
         } catch (err) {
           console.log(err);
         }
@@ -16,31 +53,6 @@ class ItemInfoService {
       },
     });
   }
-  /* Create movie/series with attributes */
-  createItem(response) {
-    this._itemTitle = response.Title;
-    this._itemType = response.Type;
-    this._itemYear = response.Year;
-    this._itemDuration = response.Runtime;
-    this._itemDescription = response.Plot;
-    this._itemPoster = response.Poster;
-    this._itemDirector = response.Director;
-    this._itemImdbRating = response.imdbRating;
-    this._itemCast = response.Actors;
-    this._itemGenre = response.Genre;
-    /*     console.log(
-      this.itemTitle,
-      this.itemType,
-      this.itemYear,
-      this.itemDuration,
-      this.itemDescription,
-      this.itemPoster,
-      this.itemDirector,
-      this.itemImdbRating,
-      this.itemCast,
-      this.itemGenre
-    ); */
-  }
 }
-//test:
-var item = new ItemInfoService();
+
+export default ItemInfoService;
