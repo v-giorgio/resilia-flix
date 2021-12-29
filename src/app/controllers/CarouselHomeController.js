@@ -1,15 +1,13 @@
 import ItemInfoService from "../services/ItemInfoService.js";
-import FilmOrSeries from "../models/FilmOrSeries.js";
 
 class CarouselHomeController {
   constructor() {
-    this._arrayFilms = [];
-    this._arraySeries = [];
     /* get API request result */
     this.apiInfoResults = new ItemInfoService();
 
     /* get poster Ids from Home */
     let $ = document.querySelector.bind(document);
+    this._seeInfoBtn = $(".infoBtn");
 
     /* Tops */
     this._posterTop1 = $("#poster-top-1");
@@ -82,7 +80,8 @@ class CarouselHomeController {
       this.postersMovies,
       this.postersSeries,
       i,
-      type
+      type,
+      this._seeInfoBtn
     );
   }
 

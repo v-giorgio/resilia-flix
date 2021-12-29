@@ -33,6 +33,8 @@ class FilmOrSeries {
     this._gender = gender;
   }
 
+  goToInfo(title, btn) {}
+
   getTitle() {
     return this._title;
   }
