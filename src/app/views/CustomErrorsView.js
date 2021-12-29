@@ -84,6 +84,12 @@ class CustomErrorsView {
     `;
   }
 
+  thankSuggestion(span) {
+    span.innerHTML = `
+    <p class="validation">${this.errorsList.thankSuggestion}</p>
+    `;
+  }
+
   clear(span) {
     span.innerHTML = "";
   }

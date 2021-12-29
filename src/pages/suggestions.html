@@ -53,19 +53,23 @@
         <div class="input-suggestions-form">
           <input name="name-user" id="name-user" required type="text" maxlength="15" />
           <label for="name-user">Nome</label>
+          <span id="input-suggestion-user"></span>
         </div>
 
         <div class="input-suggestions-form">
           <input name="email-user" id="email-user" required type="email" minlength="8" maxlength="30" />
           <label for="email-user">Email</label>
+          <span id="input-suggestion-email"></span>
         </div>
 
         <div class="input-suggestion">
           <label>Comentário</label>
-          <textarea minlength="30" maxlength="70" name="" id="" cols="30" rows="10"></textarea>
+          <textarea minlength="30" maxlength="70" name="" id="comment-user" cols="30" rows="10"></textarea>
+          <span id="input-suggestion-comment"></span>
         </div>
 
         <button class="button-suggestion" type="submit">Enviar</button>
+        <span style="text-align: center" id="suggestion-validation"></span>
     </form>
   </main>
 
@@ -131,7 +135,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
   </script>
-  <script type="module" src=""></script>
+  <script type="module" src="../app/controllers/SuggestionsController.js"></script>
 </body>
 
 </html>
