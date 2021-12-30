@@ -45,17 +45,6 @@ class FindPieceController {
         );
       }
     });
-
-    this._searchBtn.addEventListener("click", (event) => {
-      event.preventDefault();
-      if (this._list.includes(this._searchInput.value.toLowerCase())) {
-        this._spanError.innerHTML = "";
-        console.log(localStorage.getItem(this._searchInput.value));
-      } else {
-        this._spanError.innerHTML = "";
-        this._errorsView.noResults(this._spanError);
-      }
-    });
   }
 }
 

@@ -86,19 +86,15 @@ class RegisterController {
     this._inputCep.addEventListener("blur", (event) => {
       event.preventDefault();
       if (this.checkCep(this._inputCep.value)) {
-        $.when(this.apiLocation.findByCEP(this._inputCep.value, user)).then(
-          this.locationInput.fillInputs(
-            this._inputState,
-            this._inputCity,
-            this._inputNeighborhood,
-            this._inputStreet,
-            this._inputSupp,
-            user.getState(),
-            user.getCity(),
-            user.getNeighborhood(),
-            user.getStreet(),
-            user.getSupp()
-          )
+        this.apiLocation.findByCEP(
+          this._inputCep.value,
+          user,
+          this.locationInput,
+          this._inputState,
+          this._inputCity,
+          this._inputNeighborhood,
+          this._inputStreet,
+          this._inputSupp
         );
       }
     });
