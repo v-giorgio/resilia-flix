@@ -90,6 +90,12 @@ class CustomErrorsView {
     `;
   }
 
+  noResults(span) {
+    span.innerHTML = `
+    <p class="error">${this.errorsList.noResults}</p>
+    `;
+  }
+
   clear(span) {
     span.innerHTML = "";
   }

@@ -17,6 +17,7 @@ class CustomErrors {
   loginSuccess = "Login realizado com sucesso!";
   loginError = "Dados inválidos. Verifique se o e-mail ou senha estão corretos";
   thankSuggestion = "Agradecemos o seu feedback!";
+  noResults = "Nenhum resultado para a busca";
 }
 
 export default CustomErrors;

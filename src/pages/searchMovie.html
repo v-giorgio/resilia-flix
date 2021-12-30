@@ -52,7 +52,7 @@
   <main class="container-search">
     <h1>Procure seu filme ou série</h1>
     <div class="search-box">
-      <input class="search-txt" type="text" name="" placeholder="Digite para buscar" />
+      <input class="search-txt" id="search-input" type="text" name="" placeholder="Digite para buscar" />
       <a class="search-btn" href="#">
         <i class="fas fa-search"></i>
       </a>
@@ -61,8 +61,8 @@
 
     <section class="receive-movie">
       <h1 class="box-movie-title">Resultados da busca</h1>
+      <span class="error-search"></span>
       <div class="receive-movie-results">
-        <div class="box-movie">aaaa</div>
       </div>
     </section>
   </main>
@@ -128,7 +128,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
   </script>
-  <script type="module" src=""></script>
+  <script type="module" src="../app/controllers/FindPieceController.js"></script>
 </body>
 
 </html>
