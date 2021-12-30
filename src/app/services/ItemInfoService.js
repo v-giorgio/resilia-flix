@@ -28,18 +28,24 @@ class ItemInfoService {
                 postersTop[i],
                 this.item.getPosterURL()
               );
+              let topAtts = `${this.item.getTitle()}|${this.item.getType()}|${this.item.getYear()}|${this.item.getDuration()}|${this.item.getDescription()}|${this.item.getPosterURL()}|${this.item.getDirector()}|${this.item.getRating()}|${this.item.getCast()}|${this.item.getGender()}`;
+              localStorage.setItem(this.item.getTitle(), topAtts);
               break;
             case "movie":
               this.carouselView.changeSrc(
                 postersMovies[i],
                 this.item.getPosterURL()
               );
+              let moviesAtts = `${this.item.getTitle()}|${this.item.getType()}|${this.item.getYear()}|${this.item.getDuration()}|${this.item.getDescription()}|${this.item.getPosterURL()}|${this.item.getDirector()}|${this.item.getRating()}|${this.item.getCast()}|${this.item.getGender()}`;
+              localStorage.setItem(this.item.getTitle(), moviesAtts);
               break;
             case "series":
               this.carouselView.changeSrc(
                 postersSeries[i],
                 this.item.getPosterURL()
               );
+              let seriesAtts = `${this.item.getTitle()}|${this.item.getType()}|${this.item.getYear()}|${this.item.getDuration()}|${this.item.getDescription()}|${this.item.getPosterURL()}|${this.item.getDirector()}|${this.item.getRating()}|${this.item.getCast()}|${this.item.getGender()}`;
+              localStorage.setItem(this.item.getTitle(), seriesAtts);
               break;
             default:
               break;

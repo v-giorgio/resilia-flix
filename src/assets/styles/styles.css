@@ -618,13 +618,14 @@
   font-weight: bolder;
 }
 
-.movieDiv h4 {
+.movieDiv button {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 50px;
   width: 150px;
   background-color: blueviolet;
+  color: white;
   border: solid black 1px;
   border-radius: 10px;
 }
@@ -644,6 +645,16 @@
   font-weight: bolder;
   background-color: var(--black-void);
   border-radius: 10px;
+}
+
+.info-back-button {
+  max-width: 70%;
+  background-color: blueviolet;
+  padding: 0.5% 2%;
+  color: white;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin-top: 10%;
 }
 
 .boxInfos {
@@ -1020,7 +1031,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 125px;
+  padding-top: 100px;
   align-items: center;
   justify-content: center;
   color: var(--purple);
@@ -1035,7 +1046,7 @@
   display: flex;
   align-items: center;
   position: absolute;
-  top: 25%;
+  top: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--black-void);
@@ -1087,7 +1098,7 @@
   flex-flow: wrap column;
   justify-content: flex-start;
   width: 90%;
-  margin-top: 100px;
+  margin-top: 180px;
 }
 
 .box-movie-title {
@@ -1466,6 +1477,12 @@
   font-size: 13px;
 }
 
+/* DISPLAY */
+
+.invisible {
+  display: none;
+}
+
 /* ERRORS and VALIDATION */
 
 .error {
@@ -1534,6 +1551,9 @@
   .containerBig {
     display: flex;
     flex-direction: column;
+  }
+  .info-back-button {
+    margin-top: 25%;
   }
 
   /* SEARCH */

@@ -1,15 +1,45 @@
 import ItemInfoService from "../services/ItemInfoService.js";
-import FilmOrSeries from "../models/FilmOrSeries.js";
+import InfoController from "./InfoController.js";
 
 class CarouselHomeController {
   constructor() {
-    this._arrayFilms = [];
-    this._arraySeries = [];
     /* get API request result */
     this.apiInfoResults = new ItemInfoService();
 
     /* get poster Ids from Home */
     let $ = document.querySelector.bind(document);
+
+    /* get main section ids */
+    this._mainHome = $(".main-home");
+    this._mainInfo = $(".main-infoFilme");
+
+    /* get Info Ids */
+    this._button1 = $("#info-1");
+    this._button2 = $("#info-2");
+    this._button3 = $("#info-3");
+    this._button4 = $("#info-4");
+    this._button5 = $("#info-5");
+    this._button6 = $("#info-6");
+    this._button7 = $("#info-7");
+    this._button8 = $("#info-8");
+    this._button9 = $("#info-9");
+    this._button10 = $("#info-10");
+    this._button11 = $("#info-11");
+    this._button12 = $("#info-12");
+    this._button13 = $("#info-13");
+    this._button14 = $("#info-14");
+    this._button15 = $("#info-15");
+    this._button16 = $("#info-16");
+    this._button17 = $("#info-17");
+    this._button18 = $("#info-18");
+    this._button19 = $("#info-19");
+    this._button20 = $("#info-20");
+    this._button21 = $("#info-21");
+    this._button22 = $("#info-22");
+    this._button23 = $("#info-23");
+    this._button24 = $("#info-24");
+
+    this._backButton = $(".info-back-button");
 
     /* Tops */
     this._posterTop1 = $("#poster-top-1");
@@ -73,6 +103,8 @@ class CarouselHomeController {
       this._posterSeries7,
       this._posterSeries8,
     ];
+
+    this.infoSection = new InfoController();
   }
 
   createItem(title, i, type) {
@@ -102,9 +134,156 @@ class CarouselHomeController {
     return this._arrayFilms[0];
   }
 
-  getItemTitle() {
-    let itemSearched = this._arrayFilms[0];
-    return itemSearched.getType();
+  getInfo(title) {
+    this._backButton.addEventListener("click", () => {
+      this._mainHome.classList.remove("invisible");
+      this._mainInfo.classList.add("invisible");
+      window.location.href = "#";
+    });
+    this._button1.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("atlanta");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button2.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("us");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button3.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("get out");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button4.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("pose");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button5.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("insecure");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button6.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("julie and the phantoms");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button7.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("hidden figures");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button8.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("BlacKkKlansman");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button9.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("moonlight");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button10.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("the boy who harnessed the wind");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button11.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("his house");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button12.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("creed");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button13.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("black panther");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button14.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("ma rainey's black bottom");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button15.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("Spider-Man: Into the Spider-Verse");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button16.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("tim maia");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button17.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("black-ish");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button18.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("everybody hates chris");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button19.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("empire");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button20.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("scandal");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button21.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("how to get away with murder");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button22.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("julie and the phantoms");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button23.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("my wife and kids");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
+    this._button24.addEventListener("click", () => {
+      this._mainHome.classList.add("invisible");
+      this.infoSection.getAtts("insecure");
+      this._mainInfo.classList.remove("invisible");
+      window.location.href = "#";
+    });
   }
 }
 
@@ -135,3 +314,5 @@ carousel.createItemSeries("how to get away with murder", 4);
 carousel.createItemSeries("julie and the phantoms", 5);
 carousel.createItemSeries("my wife and kids", 6);
 carousel.createItemSeries("insecure", 7);
+
+carousel.getInfo();
