@@ -50,7 +50,7 @@
   <main class="main-home">
     <section class="sectionHomeGlobal">
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner carousel-img-height">
           <div class="carousel-item active">
             <img id="carroselUm" src="./src/assets/img/moonlight-background.jpg" data-bs-interval="120"
               class="d-block w-100 h-100 carousel-box-img" alt="...">
@@ -65,6 +65,7 @@
 
           </div>
 
+         </div>
         </div>
         <section class="slider">
           <h3 class="subtitle">Tops da Semana</h3>
@@ -394,7 +395,9 @@
     <section class="container">
       <div class="row">
         <div class="containerBig">
+          
           <button class="info-back-button">Voltar</button>
+       
           <div class="secPoster col-md-3 col-sm-12 justify-content-center">
             <img class="posterInfo" alt="poster" />
           </div>
@@ -403,7 +406,7 @@
               <!-- title query -->
               <h3 id="titleMovie"></h3>
             </div>
-            <button id="watch">
+            <button class="watch-button" id="watch">
               <img width="30px" src="./src/assets/img/play-icon.png" alt="Play Icon" srcset="" />
               Assistir
             </button>
@@ -413,11 +416,20 @@
           <div class="boxInfos">
             <section class="infoRow">
               <!-- rating query -->
+              <div class="icons-containers">
+              <i class="fas fa-star-half-alt"></i>
               <p id="rating"></p>
+              </div>
               <!-- year query -->
+              <div class="icons-containers">
+              <i class="fas fa-calendar-times"></i>
               <p id="year"></p>
+              </div>
               <!-- duration query -->
+              <div class="icons-containers">
+              <i class="fas fa-hourglass-half"></i>
               <p id="duration"></p>
+              </div>
             </section>
             <section class="sinopse">
               <!-- description query-->
