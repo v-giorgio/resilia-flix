@@ -1,5 +1,5 @@
 class InfoView {
-  constructor(document) {
+  constructor() {
     /* get info Ids from Info */
     let $ = document.querySelector.bind(document);
     this._posterUrl = $(".posterInfo");

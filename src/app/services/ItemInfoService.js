@@ -3,7 +3,7 @@ import CarouselHomeView from "../views/CarouselHomeView.js";
 
 class ItemInfoService {
   /* API OMDB request */
-  findByTitle(title, postersTop, postersMovies, postersSeries, i, type, btn) {
+  findByTitle(title, postersTop, postersMovies, postersSeries, i, type) {
     $.ajax({
       method: "GET",
       url: `http://www.omdbapi.com/?apikey=c6f76f28&t=${title}`,
@@ -30,9 +30,6 @@ class ItemInfoService {
               );
               let topAtts = `${this.item.getTitle()}|${this.item.getType()}|${this.item.getYear()}|${this.item.getDuration()}|${this.item.getDescription()}|${this.item.getPosterURL()}|${this.item.getDirector()}|${this.item.getRating()}|${this.item.getCast()}|${this.item.getGender()}`;
               localStorage.setItem(this.item.getTitle(), topAtts);
-              btn.addEventListener("click", () => {
-                this.item.goToInfo(this.item.getTitle(), btn);
-              });
               break;
             case "movie":
               this.carouselView.changeSrc(
@@ -41,9 +38,6 @@ class ItemInfoService {
               );
               let moviesAtts = `${this.item.getTitle()}|${this.item.getType()}|${this.item.getYear()}|${this.item.getDuration()}|${this.item.getDescription()}|${this.item.getPosterURL()}|${this.item.getDirector()}|${this.item.getRating()}|${this.item.getCast()}|${this.item.getGender()}`;
               localStorage.setItem(this.item.getTitle(), moviesAtts);
-              btn.addEventListener("click", () => {
-                this.item.goToInfo(this.item.getTitle(), btn);
-              });
               break;
             case "series":
               this.carouselView.changeSrc(
@@ -52,9 +46,6 @@ class ItemInfoService {
               );
               let seriesAtts = `${this.item.getTitle()}|${this.item.getType()}|${this.item.getYear()}|${this.item.getDuration()}|${this.item.getDescription()}|${this.item.getPosterURL()}|${this.item.getDirector()}|${this.item.getRating()}|${this.item.getCast()}|${this.item.getGender()}`;
               localStorage.setItem(this.item.getTitle(), seriesAtts);
-              btn.addEventListener("click", () => {
-                this.item.goToInfo(this.item.getTitle(), btn);
-              });
               break;
             default:
               break;

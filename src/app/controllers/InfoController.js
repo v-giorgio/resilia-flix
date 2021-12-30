@@ -3,24 +3,23 @@ import InfoView from "../views/InfoView.js";
 class InfoController {
   constructor() {
     /* get InfoView */
-    this.infoView = new InfoView(document);
+    this.infoView = new InfoView();
   }
 
   getAtts(title) {
-    let itemAtts = localStorage.getItem(title).split("|");
+    this.itemAtts = localStorage.getItem(title).split("|");
     this.fillInfo(
-      itemAtts[0],
-      itemAtts[1],
-      itemAtts[2],
-      itemAtts[3],
-      itemAtts[4],
-      itemAtts[5],
-      itemAtts[6],
-      itemAtts[7],
-      itemAtts[8],
-      itemAtts[9]
+      this.itemAtts[0],
+      this.itemAtts[1],
+      this.itemAtts[2],
+      this.itemAtts[3],
+      this.itemAtts[4],
+      this.itemAtts[5],
+      this.itemAtts[6],
+      this.itemAtts[7],
+      this.itemAtts[8],
+      this.itemAtts[9]
     );
-    //console.log(itemAtts);
   }
 
   fillInfo(
@@ -50,8 +49,8 @@ class InfoController {
   }
 }
 
-const info = new InfoController();
-info.getAtts("atlanta");
+export default InfoController;
+/* info.getAtts();
 info.getAtts("us");
 info.getAtts("get out");
 info.getAtts("pose");
@@ -72,4 +71,4 @@ info.getAtts("everybody hates chris");
 info.getAtts("empire");
 info.getAtts("scandal");
 info.getAtts("how to get away with murder");
-info.getAtts("my wife and kids");
+info.getAtts("my wife and kids"); */
