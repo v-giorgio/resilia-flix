@@ -3,35 +3,50 @@ import CustomErrors from "../models/CustomErrors.js";
 class UserLocationService {
   errorsCheck = new CustomErrors();
   /* API CEP request */
-  findByCEP(cep, user) {
+  findByCEP(
+    cep,
+    user,
+    location,
+    inputState,
+    inputCity,
+    inputNeighborhood,
+    inputStreet,
+    inputSupp
+  ) {
     $.ajax({
       method: "GET",
       url: `https://viacep.com.br/ws/${cep}/json/`,
       success: (response) => {
         try {
           //console.log(response);
-          this.setUserLocation(response, user);
+          user.setLocation(
+            response.uf,
+            response.localidade,
+            response.bairro,
+            response.logradouro,
+            response.complemento
+          );
+          location.fillInputs(
+            inputState,
+            inputCity,
+            inputNeighborhood,
+            inputStreet,
+            inputSupp,
+            user.getState(),
+            user.getCity(),
+            user.getNeighborhood(),
+            user.getStreet(),
+            user.getSupp()
+          );
           return true;
         } catch (err) {
-          //console.log(err);
-          return false;
+          throw new Error(err);
         }
       },
       error: (xhr, thrownError) => {
         console.log(xhr, thrownError);
       },
     });
-  }
-
-  setUserLocation(response, user) {
-    console.log(response.uf);
-    user.setLocation(
-      response.uf,
-      response.localidade,
-      response.bairro,
-      response.logradouro,
-      response.complemento
-    );
   }
 }
 
