@@ -12,6 +12,7 @@ class CarouselHomeController {
     /* get main section ids */
     this._mainHome = $(".main-home");
     this._mainInfo = $(".main-infoFilme");
+    this._mainTrailer = $(".main-video");
 
     /* get Info Ids */
     this._button1 = $("#info-1");
@@ -40,6 +41,9 @@ class CarouselHomeController {
     this._button24 = $("#info-24");
 
     this._backButton = $(".info-back-button");
+    this._watchButton = $("#watch");
+    this._backButtonTrailer = $(".info-back-button-trailer");
+    this._iframe = $("#iframeSection");
 
     /* Tops */
     this._posterTop1 = $("#poster-top-1");
@@ -134,154 +138,188 @@ class CarouselHomeController {
     return this._arrayFilms[0];
   }
 
-  getInfo(title) {
+  getInfo() {
     this._backButton.addEventListener("click", () => {
       this._mainHome.classList.remove("invisible");
       this._mainInfo.classList.add("invisible");
+      window.location.href = "#";
+    });
+    this._watchButton.addEventListener("click", () => {
+      this._mainInfo.classList.add("invisible");
+      this._mainTrailer.classList.remove("invisible");
+    });
+    this._backButtonTrailer.addEventListener("click", () => {
+      this._mainHome.classList.remove("invisible");
+      this._mainInfo.classList.add("invisible");
+      this._mainTrailer.classList.add("invisible");
       window.location.href = "#";
     });
     this._button1.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("atlanta");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/sqFJ7Dh39QI";
       window.location.href = "#";
     });
     this._button2.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("us");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/hNCmb-4oXJA";
       window.location.href = "#";
     });
     this._button3.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("get out");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/DzfpyUB60YY";
       window.location.href = "#";
     });
     this._button4.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("pose");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/_t4YuPXdLZw";
       window.location.href = "#";
     });
     this._button5.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("insecure");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/k7JY7e07oGA";
       window.location.href = "#";
     });
     this._button6.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("julie and the phantoms");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/PsWVTN_xu5Y";
       window.location.href = "#";
     });
     this._button7.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("hidden figures");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/RK8xHq6dfAo";
       window.location.href = "#";
     });
     this._button8.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("BlacKkKlansman");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/bbOJwWSEUmo";
       window.location.href = "#";
     });
     this._button9.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("moonlight");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/cHy9GJ2TLNY";
       window.location.href = "#";
     });
     this._button10.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("the boy who harnessed the wind");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/nPkr9HmglG0";
       window.location.href = "#";
     });
     this._button11.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("his house");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/DYY0QJhlXjc";
       window.location.href = "#";
     });
     this._button12.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("creed");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/661sQScpXJc";
       window.location.href = "#";
     });
     this._button13.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("black panther");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/xjDjIWPwcPU";
       window.location.href = "#";
     });
     this._button14.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("ma rainey's black bottom");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/ord7gP151vk";
       window.location.href = "#";
     });
     this._button15.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("Spider-Man: Into the Spider-Verse");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/g4Hbz2jLxvQ";
       window.location.href = "#";
     });
     this._button16.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("tim maia");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/7G8FnHXgXQg";
       window.location.href = "#";
     });
     this._button17.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("black-ish");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/f2oHMze7RwY";
       window.location.href = "#";
     });
     this._button18.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("everybody hates chris");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/XNGuV0N1FpI";
       window.location.href = "#";
     });
     this._button19.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("empire");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/6EtcV5oUNX0";
       window.location.href = "#";
     });
     this._button20.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("scandal");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/MvpYIela7_o";
       window.location.href = "#";
     });
     this._button21.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("how to get away with murder");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/dkb-aBaxkVk";
       window.location.href = "#";
     });
     this._button22.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("julie and the phantoms");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/PsWVTN_xu5Y";
       window.location.href = "#";
     });
     this._button23.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("my wife and kids");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/mRjAMQT9IHs";
       window.location.href = "#";
     });
     this._button24.addEventListener("click", () => {
       this._mainHome.classList.add("invisible");
       this.infoSection.getAtts("insecure");
       this._mainInfo.classList.remove("invisible");
+      this._iframe.src = "https://www.youtube.com/embed/kqCwxtEdJWk";
       window.location.href = "#";
     });
   }
