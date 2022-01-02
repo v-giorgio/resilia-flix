@@ -483,7 +483,7 @@
   background-color: var(--black-void-lighter);
 }
 .carousel-img-height {
-  height: 80vh;
+  height: 89vh;
   display: flex;
   align-items: center;
 }
@@ -492,6 +492,7 @@
   opacity: 0.7;
   background-color: var(--purple-blur);
 }
+
 .carousel-item {
   margin-bottom: 3%;
 }
@@ -589,19 +590,21 @@
 }
 
 /* INFO-FILM AND SERIES */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap");
-
 .main-infoFilme {
-  font-family: "Poppins", sans-serif;
   height: 100%;
   width: 100%;
-  background: var(--black-void);
+  background-image: linear-gradient(
+    to bottom right,
+    var(--black-void),
+    var(--black-void-lighter)
+  );
   box-sizing: border-box;
-  color: white;
 }
 
 .posterInfo {
   margin-top: 100px;
+  box-shadow: 0 0 0.8rem var(--purple);
+  border-radius: 15px;
 }
 
 .containerBig {
@@ -623,7 +626,9 @@
 
 .boxTitle h3 {
   margin-bottom: 40px;
-  font-weight: bolder;
+  color: var(--purple);
+  font-weight: 300;
+  letter-spacing: 3px;
 }
 
 .movieDiv button {
@@ -652,49 +657,100 @@
   align-items: center;
   justify-content: space-evenly;
   font-weight: bolder;
-  background-color: var(--black-void);
+  background-color: transparent;
   border-radius: 10px;
 }
 
-.info-back-button,
+.info-back-button {
+  /* reset appeareance */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  /* box */
+  border: none;
+  background-color: transparent;
+  /* text */
+  color: var(--purple);
+  font-size: 1em;
+}
+
+.info-back,
+.info-back-button-tr {
+  /* reset appeareance */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  /* box */
+  border: none;
+  border: 1px solid var(--purple);
+  border-radius: 10px;
+  background-color: transparent;
+  text-align: center;
+  /* text */
+  color: var(--purple);
+  font-size: 1em;
+}
+
+.info-back-button-tr,
+.info-back {
+  padding: 10px;
+}
+
+.info-back {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.info-back img,
+.info-back-button-tr img {
+  width: 20%;
+}
+
 .info-back-button-trailer {
   /* reset appeareance */
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   /* box */
-  width: 150px;
-  padding: 16px 0;
   border: none;
-  border: 1px solid var(--purple);
-  border-radius: 15px;
-  background-color: transparent;  
+  background-color: transparent;
   /* text */
   color: var(--purple);
   font-size: 1em;
 }
-.info-back-button:hover,
-.info-back-button-trailer:hover{
+
+.info-back:hover,
+.info-back-button-tr:hover {
   box-shadow: 0 0 0.5rem var(--purple);
   border-color: var(--blue-neon);
-} 
+  cursor: pointer;
+}
 
-
+.info-back:hover,
+.info-back:not(:hover),
+.info-back-button-tr:hover,
+.info-back-button-tr:not(:hover),
+#watch:hover,
+#watch:not(:hover) {
+  transition-duration: 0.3s;
+}
 
 .boxInfos {
-  color:var(--purple) ;
+  color: var(--purple);
   width: 50%;
   height: fit-content;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 15px;
   font-weight: bolder;
-  box-shadow: 0 0 0.15rem var(--blue-neon);
+  box-shadow: 0 0 0.15rem var(--purple);
 }
 
-.sinopse p{
+.sinopse p {
   text-align: center;
   padding-left: 10px;
+  font-weight: 300;
 }
 
 .icons-containers {
@@ -703,18 +759,19 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-weight: 500;
 }
 
 .icons-containers p {
-  padding-left:10px;
+  padding-left: 10px;
   padding-top: 1px;
-  margin-top:15px; 
+  margin-top: 15px;
 }
 
 .box-casting {
   color: var(--purple);
   margin-top: 40px;
-  background-color: var(--black-void);
+  background-color: transparent;
   width: 200px;
   height: 100%;
   border: 2px;
@@ -723,10 +780,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  box-shadow: 0 0 0.15rem var(--blue-neon);
-  
+  box-shadow: 0 0 0.15rem var(--purple);
 }
-.box-casting h6{
+
+.box-casting h6 {
   font-weight: bolder;
 }
 
@@ -743,31 +800,31 @@
   width: 70%;
   height: 500px;
 }
-#watch{
+#watch {
   /* reset appeareance */
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   /* box */
   width: 150px;
-  padding: 16px 0;
+  padding: 10px 0;
   border: none;
-  border: 1px solid var(--blue-neon);
-  border-radius: 15px;
-  background-color: transparent;  
+  border: 1px solid var(--purple);
+  border-radius: 10px;
+  background-color: transparent;
   /* text */
-  color: var(--blue-neon);
+  color: var(--purple);
   font-size: 1em;
   font-weight: bolder;
   /* background-color: var(--black-blur); */
   opacity: 0.7 var(--black-blur);
 }
 
-#watch img{
-  color:white;
+#watch img {
+  color: white;
 }
 
-#watch:hover{
+#watch:hover {
   box-shadow: 0 0 0.5rem var(--blue-neon);
   border-color: var(--blue-neon);
 }
@@ -1121,6 +1178,7 @@
   flex-direction: column;
   width: 100%;
   padding-top: 100px;
+  padding-bottom: 150px;
   align-items: center;
   justify-content: center;
   color: var(--purple);
@@ -1206,8 +1264,19 @@
   background: var(--black-void-blur-2);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  box-shadow: 0 0 2rem var(--purple-blur);
-  margin: 0 5% 5% 5%;
+  box-shadow: 0 0 1rem var(--purple-blur);
+  margin: 10px;
+}
+
+.box-movie:hover {
+  box-shadow: 0 0 3rem var(--purple);
+  cursor: pointer;
+  padding: 0.1%;
+}
+
+.box-movie:hover,
+.box-movie:not(:hover) {
+  transition-duration: 0.2s;
 }
 
 /* PARTNERS */
@@ -1642,23 +1711,13 @@
   }
 
   .containerBig {
-    display: flex;
+    padding-top: 20%;
     flex-direction: column;
   }
 
   .info-back-button {
     margin-top: 25%;
   }
-
-  /* SEARCH */
-  .search-box {
-    top: 30%;
-  }
-  .container-info {
-    display: flex;
-    flex-direction: column;
-  }
-  /*  INFO FILM */
 
   .boxInfos {
     width: 100%;
@@ -1668,6 +1727,15 @@
     margin-top: 30px;
     width: 100%;
     height: 400px;
+  }
+
+  /* SEARCH */
+  .search-box {
+    top: 30%;
+  }
+  .container-info {
+    display: flex;
+    flex-direction: column;
   }
   /* HOME */
   .carousel-img-height {

@@ -40,9 +40,9 @@ class CarouselHomeController {
     this._button23 = $("#info-23");
     this._button24 = $("#info-24");
 
-    this._backButton = $(".info-back-button");
+    this._backButton = $(".info-back");
     this._watchButton = $("#watch");
-    this._backButtonTrailer = $(".info-back-button-trailer");
+    this._backButtonTrailer = $(".info-back-button-tr");
     this._iframe = $("#iframeSection");
 
     /* Tops */
