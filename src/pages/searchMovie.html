@@ -63,7 +63,94 @@
       <h1 class="box-movie-title">Resultados da busca</h1>
       <span class="error-search"></span>
       <div class="receive-movie-results">
+        <div id="info-1" class="box-movie"></div>
+        <div id="info-2" class="box-movie"></div>
+        <div id="info-3" class="box-movie"></div>
+        <div id="info-4" class="box-movie"></div>
+        <div id="info-5" class="box-movie"></div>
+        <div id="info-6" class="box-movie"></div>
+        <div id="info-7" class="box-movie"></div>
+        <div id="info-8" class="box-movie"></div>
+        <div id="info-9" class="box-movie"></div>
+        <div id="info-10" class="box-movie"></div>
+        <div id="info-11" class="box-movie"></div>
+        <div id="info-12" class="box-movie"></div>
+        <div id="info-13" class="box-movie"></div>
+        <div id="info-14" class="box-movie"></div>
+        <div id="info-15" class="box-movie"></div>
+        <div id="info-16" class="box-movie"></div>
+        <div id="info-17" class="box-movie"></div>
+        <div id="info-18" class="box-movie"></div>
+        <div id="info-19" class="box-movie"></div>
+        <div id="info-20" class="box-movie"></div>
+        <div id="info-21" class="box-movie"></div>
+        <div id="info-22" class="box-movie"></div>
+      </div>
+    </section>
+  </main>
 
+  <!-- MAIN INFO -->
+  <main class="main-infoFilme invisible">
+    <section class="container">
+      <div class="row">
+        <div class="bg-image-info"></div>
+        <div class="containerBig">
+          <div class="info-back">
+            <img src="../assets/img/return-icon.png" alt="Return Icon" srcset="" />
+            <button class="info-back-button">Voltar</button>
+          </div>
+          <div class="secPoster col-md-3 col-sm-12 justify-content-center">
+            <img class="posterInfo" alt="poster" />
+          </div>
+          <div class="movieDiv">
+            <div class="boxTitle row">
+              <!-- title query -->
+              <h3 id="titleMovie"></h3>
+            </div>
+            <button class="watch-button" id="watch">
+              <img width="20px" src="../assets/img/play-icon.png" alt="Play Icon" srcset="" />
+              Assistir
+            </button>
+          </div>
+        </div>
+        <div class="container-info">
+          <div class="boxInfos">
+            <section class="infoRow">
+              <!-- rating query -->
+              <div class="icons-containers">
+                <i class="fas fa-star-half-alt"></i>
+                <p id="rating"></p>
+              </div>
+              <!-- year query -->
+              <div class="icons-containers">
+                <i class="fas fa-calendar-times"></i>
+                <p id="year"></p>
+              </div>
+              <!-- duration query -->
+              <div class="icons-containers">
+                <i class="fas fa-hourglass-half"></i>
+                <p id="duration"></p>
+              </div>
+            </section>
+            <section class="sinopse">
+              <!-- description query-->
+              <p id="sinopseText"></p>
+            </section>
+          </div>
+          <section class="sectionBox">
+            <div class="box-casting">
+              <!-- directors query-->
+              <h6>Direção:</h6>
+              <p id="director"></p>
+              <!-- cast query-->
+              <h6>Elenco:</h6>
+              <p id="cast"></p>
+              <!-- gender query-->
+              <h6>Gênero:</h6>
+              <p id="gender"></p>
+            </div>
+          </section>
+        </div>
       </div>
     </section>
   </main>
@@ -72,6 +159,10 @@
   <main class="main-video invisible">
     <section class="container">
       <div class="containerBig">
+        <div class="info-back-button-tr">
+          <img width="20px" src="../assets/img/play-icon.png" alt="Play Icon" srcset="" />
+          <button class="info-back-button-trailer">Voltar</button>
+        </div>
         <iframe id="iframeSection" frameborder="0" allowfullscreen>
         </iframe>
       </div>
