@@ -1,16 +1,21 @@
 import ItemInfoService from "../services/ItemInfoService.js";
 
+/* Model for every movie or series requested from the api */
+
 class FilmOrSeries {
+  /* constructor receives the title and initializes the api to get other info */
   constructor(title) {
     this._title = title;
     this.apiService = new ItemInfoService();
     this.callApi(this._title);
   }
 
+  /* call the method to request the api service */
   callApi(title) {
     this.apiService.findByTitle(title, this);
   }
 
+  /* this method is called in the service api to set the other info about the piece */
   setData(
     type,
     year,
@@ -32,6 +37,8 @@ class FilmOrSeries {
     this._cast = cast;
     this._gender = gender;
   }
+
+  /* getters for each info */
 
   getTitle() {
     return this._title;

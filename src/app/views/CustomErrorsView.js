@@ -1,6 +1,7 @@
 import CustomErrors from "../models/CustomErrors.js";
 
 class CustomErrorsView {
+  /* initializes the message model to be used on every kind of error/validation */
   constructor() {
     this.errorsList = new CustomErrors();
   }

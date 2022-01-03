@@ -52,6 +52,7 @@ class RegisterController {
     this.locationInput = new UserLocationView();
   }
 
+  /* check every input */
   createUser() {
     this._inputName.addEventListener("blur", (event) => {
       event.preventDefault();
@@ -83,6 +84,7 @@ class RegisterController {
 
     let user = new User();
 
+    /* call the location api service */
     this._inputCep.addEventListener("blur", (event) => {
       event.preventDefault();
       if (this.checkCep(this._inputCep.value)) {
@@ -99,6 +101,7 @@ class RegisterController {
       }
     });
 
+    /* allow the user to fill the location inputs if the api fails */
     this._inputState.addEventListener("blur", (event) => {
       event.preventDefault();
       this.checkState(this._inputState.value);
@@ -135,6 +138,7 @@ class RegisterController {
     this._registerBtn.addEventListener("click", (event) => {
       event.preventDefault();
       this._msgRegisterValidation.innerHTML = "";
+      /* validate every input before submitting */
       if (
         this.checkName(this._inputName.value) &&
         this.checkEmail(this._inputEmail.value) &&
@@ -154,6 +158,7 @@ class RegisterController {
           this._inputRG.value,
           this._inputCep.value
         );
+        /* check if the api did not work */
         if (
           user.getState() == "" ||
           user.getCity() == "" ||
@@ -169,6 +174,7 @@ class RegisterController {
             this._inputSupp.value
           );
         }
+        /* check if user email already exists */
         if (!this.checkUserAlreadyCreated(user.getEmail())) {
           this.errorsListMsg.userAlreadyDefined(this._msgRegisterValidation);
         } else {
@@ -207,6 +213,7 @@ class RegisterController {
     });
   }
 
+  /* check the name format - no digits - using the validators */
   checkName(name) {
     if (!this.errorCheck.checkErrorEmptyInput(name)) {
       this.errorsListMsg.clear(this._msgName);
@@ -222,6 +229,7 @@ class RegisterController {
     }
   }
 
+  /* check the email format using the validators */
   checkEmail(email) {
     if (!this.errorCheck.checkErrorEmptyInput(email)) {
       this.errorsListMsg.clear(this._msgEmail);
@@ -237,6 +245,7 @@ class RegisterController {
     }
   }
 
+  /* check the password format using the validators */
   checkPassword(password) {
     if (!this.errorCheck.checkErrorEmptyInput(password)) {
       this.errorsListMsg.clear(this._msgPassword);
@@ -252,6 +261,7 @@ class RegisterController {
     }
   }
 
+  /* check if the passwords match using the validators */
   checkConfirmPassword(password, confirmPassword) {
     if (!this.errorCheck.checkErrorEmptyInput(password)) {
       this.errorsListMsg.clear(this._msgCheckPassword);
@@ -269,6 +279,7 @@ class RegisterController {
     }
   }
 
+  /* check the rg format using the validators */
   checkRg(RG) {
     if (!this.errorCheck.checkErrorEmptyInput(RG)) {
       this.errorsListMsg.clear(this._msgRG);
@@ -284,6 +295,7 @@ class RegisterController {
     }
   }
 
+  /* check the cep format using the validators */
   checkCep(cep) {
     if (!this.errorCheck.checkErrorEmptyInput(cep)) {
       this.errorsListMsg.clear(this._msgCep);
@@ -299,6 +311,7 @@ class RegisterController {
     }
   }
 
+  /* check the state format using the validators */
   checkState(state) {
     if (!this.errorCheck.checkErrorEmptyInput(state)) {
       this.errorsListMsg.clear(this._msgState);
@@ -310,6 +323,7 @@ class RegisterController {
     }
   }
 
+  /* check the city format using the validators */
   checkCity(city) {
     if (!this.errorCheck.checkErrorEmptyInput(city)) {
       this.errorsListMsg.clear(this._msgCity);
@@ -321,6 +335,7 @@ class RegisterController {
     }
   }
 
+  /* check the neighborhood format using the validators */
   checkNeighborhood(neighborhood) {
     if (!this.errorCheck.checkErrorEmptyInput(neighborhood)) {
       this.errorsListMsg.clear(this._msgNeighborhood);
@@ -332,6 +347,7 @@ class RegisterController {
     }
   }
 
+  /* check the street format using the validators */
   checkStreet(street) {
     if (!this.errorCheck.checkErrorEmptyInput(street)) {
       this.errorsListMsg.clear(this._msgStreet);
@@ -343,6 +359,7 @@ class RegisterController {
     }
   }
 
+  /* check the supplement format using the validators */
   checkSupp(supp) {
     if (!this.errorCheck.checkErrorEmptyInput(supp)) {
       this.errorsListMsg.clear(this._msgSupp);
@@ -354,6 +371,7 @@ class RegisterController {
     }
   }
 
+  /* check the number format using the validators */
   checkNum(num) {
     if (!this.errorCheck.checkErrorEmptyInput(num)) {
       this.errorsListMsg.clear(this._msgNum);
@@ -365,6 +383,7 @@ class RegisterController {
     }
   }
 
+  /* check on the localstorage if user email is already created using the validators */
   checkUserAlreadyCreated(userEmail) {
     if (!this.errorCheck.checkErrorUserNotDefined(userEmail)) {
       this.errorsListMsg.clear(this._msgRegisterValidation);
@@ -374,10 +393,6 @@ class RegisterController {
       this.errorsListMsg.clear(this._msgRegisterValidation);
       return true;
     }
-  }
-
-  getUserList() {
-    return this._userList;
   }
 }
 

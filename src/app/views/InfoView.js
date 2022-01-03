@@ -14,6 +14,7 @@ class InfoView {
     this._type = "";
   }
 
+  /* set the info about the movie/series on the Info page */
   setInfo(
     title,
     type,

@@ -45,6 +45,7 @@ class RecoverPasswordController {
     });
   }
 
+  /* check the email format using the validators */
   checkEmail(email) {
     if (!this.errorCheck.checkErrorEmptyInput(email)) {
       this.errorsListMsg.clear(this._msgEmail);
@@ -60,6 +61,7 @@ class RecoverPasswordController {
     }
   }
 
+  /* check if the email exists on the localstorage using the validators */
   checkUserNotDefined(userEmail) {
     if (this.errorCheck.checkErrorUserNotDefined(userEmail)) {
       this.errorsListMsg.clear(this._msgValidation);

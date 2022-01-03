@@ -17,7 +17,11 @@
 <h4>* Todas as telas possuem uma barra de navegação e um rodapé padrão</h4>
 <hr>
 <h2>Demonstração</h2>
-<h3>. . . Em construção</h3>
+<img src="./src/assets/img/demo-1.png">
+<img src="./src/assets/img/demo-4.png">
+<img src="./src/assets/img/demo-3.png">
+<img src="./src/assets/img/demo-2.png">
+<img src="./src/assets/img/demo-5.png">
 <hr><br>
 <h2 style="margin-bottom: 30px">Tecnologias utilizadas</h2>
 <img width="100" src="./src/assets/img/html-css-js-icon.png"> 

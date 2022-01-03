@@ -6,6 +6,7 @@ class InfoController {
     this.infoView = new InfoView();
   }
 
+  /* find the movie/series by key - the title - on the localstorage and get every piece of info from it */
   getAtts(title) {
     this.itemAtts = localStorage.getItem(title).split("|");
     this.fillInfo(
@@ -22,6 +23,7 @@ class InfoController {
     );
   }
 
+  /* method that calls the view to fill the info page */
   fillInfo(
     title,
     type,
@@ -50,25 +52,3 @@ class InfoController {
 }
 
 export default InfoController;
-/* info.getAtts();
-info.getAtts("us");
-info.getAtts("get out");
-info.getAtts("pose");
-info.getAtts("insecure");
-info.getAtts("julie and the phantoms");
-info.getAtts("hidden figures");
-info.getAtts("BlacKkKlansman");
-info.getAtts("moonlight");
-info.getAtts("the boy who harnessed the wind");
-info.getAtts("his house");
-info.getAtts("creed");
-info.getAtts("black panther");
-info.getAtts("ma rainey's black bottom");
-info.getAtts("Spider-Man: Into the Spider-Verse");
-info.getAtts("tim maia");
-info.getAtts("black-ish");
-info.getAtts("everybody hates chris");
-info.getAtts("empire");
-info.getAtts("scandal");
-info.getAtts("how to get away with murder");
-info.getAtts("my wife and kids"); */
