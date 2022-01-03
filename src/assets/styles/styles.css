@@ -1190,6 +1190,7 @@
 }
 
 .search-box {
+  height: 50px;
   display: flex;
   align-items: center;
   position: absolute;
@@ -1197,7 +1198,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--black-void);
-  height: 50px;
   border-radius: 40px;
   padding: 10px;
 }
