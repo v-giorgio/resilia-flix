@@ -23,6 +23,7 @@ class LoginController {
     this.errorsListMsg = new CustomErrorsView();
   }
 
+  /* check every input */
   userLogin() {
     this._inputEmail.addEventListener("blur", (event) => {
       event.preventDefault();
@@ -61,6 +62,7 @@ class LoginController {
     });
   }
 
+  /* check the email input using the validators */
   checkEmail(email) {
     if (!this.errorCheck.checkErrorEmptyInput(email)) {
       this.errorsListMsg.clear(this._msgEmail);
@@ -76,6 +78,7 @@ class LoginController {
     }
   }
 
+  /* check the password input using the validators */
   checkPassword(password) {
     if (!this.errorCheck.checkErrorEmptyInput(password)) {
       this.errorsListMsg.clear(this._msgPassword);
@@ -91,6 +94,7 @@ class LoginController {
     }
   }
 
+  /* check if the user exists on the localstorage using the validators */
   checkCorrectLogin(userEmail, userPassword) {
     if (!this.errorCheck.checkCorrectLogin(userEmail, userPassword)) {
       this.errorsListMsg.clear(this._msgValidation);

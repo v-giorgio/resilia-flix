@@ -27,6 +27,7 @@ class SuggestionsController {
     this.errorsListMsg = new CustomErrorsView();
   }
 
+  /* check every input from suggestion page */
   validateSuggestion() {
     this._inputName.addEventListener("blur", (event) => {
       event.preventDefault();
@@ -66,6 +67,7 @@ class SuggestionsController {
     });
   }
 
+  /* check the name format - no digits - using the validators */
   checkName(name) {
     if (!this.errorCheck.checkErrorEmptyInput(name)) {
       this.errorsListMsg.clear(this._msgName);
@@ -81,6 +83,7 @@ class SuggestionsController {
     }
   }
 
+  /* check the email format using the validators */
   checkEmail(email) {
     if (!this.errorCheck.checkErrorEmptyInput(email)) {
       this.errorsListMsg.clear(this._msgEmail);
@@ -96,6 +99,7 @@ class SuggestionsController {
     }
   }
 
+  /* check if the suggestion box is not empty using the validators */
   checkComment(comment) {
     if (!this.errorCheck.checkErrorEmptyInput(comment)) {
       this.errorsListMsg.clear(this._msgComment);
@@ -107,11 +111,13 @@ class SuggestionsController {
     }
   }
 
+  /* create the suggestion and put it in an array */
   createSuggestion(name, email, comment) {
     let suggestion = new Suggestion(name, email, comment);
     this._listSuggestions.push(suggestion);
   }
 
+  /* all suggestions getter */
   getAllSuggestions() {
     return this._listSuggestions;
   }

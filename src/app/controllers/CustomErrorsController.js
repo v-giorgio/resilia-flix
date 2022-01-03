@@ -1,14 +1,19 @@
+/* check every possible error along the input validation */
+
 class CustomErrorsController {
+  /* empty input */
   checkErrorEmptyInput(input) {
     if (input === "" || input === " " || input === 0) return false;
     else return true;
   }
 
+  /* input can have only string - no digits */
   checkErrorOnlyString(input) {
     if (/\d/.test(input)) return false;
     else return true;
   }
 
+  /* invalid email format */
   checkErrorInvalidEmail(input) {
     if (
       input.indexOf("@") === 0 ||
@@ -26,6 +31,7 @@ class CustomErrorsController {
     else return true;
   }
 
+  /* invalid password format */
   checkErrorInvalidPassword(input) {
     let regex = new RegExp(
       "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})"
@@ -34,22 +40,25 @@ class CustomErrorsController {
     else return false;
   }
 
+  /* invalid cep length */
   checkErrorCepLength(input) {
     if (input.toString().length == 8) return true;
     else return false;
   }
 
+  /* invalid rg length */
   checkErrorRGLength(input) {
     if (input.toString().length == 9) return true;
     else return false;
   }
 
+  /* passwords do not match */
   checkErrorMatchingPasswords(password, checkedPassword) {
     if (password === checkedPassword) return true;
     else return false;
   }
 
-  /* find in the array if there is an user with the same email */
+  /* find in the localstorage if there is an user with the same email */
   checkErrorUserNotDefined(userEmail) {
     let keys = Object.keys(localStorage);
     let emailValue = "";
@@ -62,6 +71,7 @@ class CustomErrorsController {
     return true;
   }
 
+  /* find in the localstorage if the user exists */
   checkCorrectLogin(userEmail, userPassword) {
     let keys = Object.keys(localStorage);
     let emailValue = "";

@@ -1,3 +1,5 @@
+/* Custom messages for each kind of error or validation */
+
 class CustomErrors {
   emptyInput = "Campo obrigatório";
   manyEmptyInputs = "Preencha os campos obrigatórios";

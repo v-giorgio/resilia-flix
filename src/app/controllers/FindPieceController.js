@@ -58,6 +58,7 @@ class FindPieceController {
     this.infoSection = new InfoController();
   }
 
+  /* locate the piece in the localstorage according to every char in the input upon blur action */
   findPiece() {
     this._searchInput.addEventListener("blur", (event) => {
       event.preventDefault();
@@ -110,6 +111,7 @@ class FindPieceController {
     });
   }
 
+  /* get the divs from every movie/series selected */
   getDiv(pieceName) {
     switch (pieceName) {
       case "atlanta":
@@ -161,6 +163,7 @@ class FindPieceController {
     }
   }
 
+  /* create the click event upon clicking the posters that appear after searching */
   createEvent() {
     this._backButton.addEventListener("click", () => {
       this._mainSearch.classList.remove("invisible");

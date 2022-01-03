@@ -1,6 +1,9 @@
+/* Model containing every info about the user created */
+
 class User {
+  /* initializes every value upon instance */
   constructor() {
-    this._name = "nae";
+    this._name = "";
     this._email = "";
     this._password = "";
     this._rg = "";
@@ -13,6 +16,7 @@ class User {
     this._num = "";
   }
 
+  /* method called by the service api to set the location data */
   setLocation(state, city, neighborhood, street, supp) {
     this._state = state;
     this._city = city;
@@ -21,6 +25,7 @@ class User {
     this._supp = supp;
   }
 
+  /* set the rest of information that does not come from the api */
   setData(name, email, password, rg, cep) {
     this._name = name;
     this._email = email;
@@ -29,9 +34,12 @@ class User {
     this._cep = cep;
   }
 
+  /* set num info - it comes after the api service (avoid conflict) */
   setNum(number) {
     this._number = number;
   }
+
+  /* getters */
 
   getName() {
     return this._name;

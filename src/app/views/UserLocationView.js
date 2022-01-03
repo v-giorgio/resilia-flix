@@ -1,4 +1,5 @@
 class UserLocationView {
+  /* fill the inputs about the location according to the info from the api */
   fillInputs(
     inputState,
     inputCity,

@@ -8,6 +8,10 @@ class ItemInfoService {
       method: "GET",
       url: `http://www.omdbapi.com/?apikey=c6f76f28&t=${title}`,
       success: function (response) {
+        /* 
+          call the method to set the movie/series data
+          call the carousel view to show the posters
+        */
         try {
           this.item = new FilmOrSeries(title);
           this.carouselView = new CarouselHomeView();
@@ -22,6 +26,10 @@ class ItemInfoService {
             response.Actors,
             response.Genre
           );
+          /* 
+            selects the category among the home lists
+            put the info from the movie/series in the localstorage
+          */
           switch (type) {
             case "top":
               this.carouselView.changeSrc(

@@ -17,6 +17,10 @@ class UserLocationService {
       method: "GET",
       url: `https://viacep.com.br/ws/${cep}/json/`,
       success: (response) => {
+        /*
+          set the user location on the User class
+          fill the inputs with the info received
+        */
         try {
           //console.log(response);
           user.setLocation(

@@ -111,6 +111,7 @@ class CarouselHomeController {
     this.infoSection = new InfoController();
   }
 
+  /* create every movie from the list of selected movies */
   createItem(title, i, type) {
     this.apiInfoResults.findByTitle(
       title,
@@ -121,6 +122,8 @@ class CarouselHomeController {
       type
     );
   }
+
+  /* create the items on each list */
 
   createItemTop(title, i) {
     this.createItem(title, i, "top");
@@ -134,10 +137,7 @@ class CarouselHomeController {
     this.createItem(title, i, "series");
   }
 
-  showItems() {
-    return this._arrayFilms[0];
-  }
-
+  /* create the info page dynamically upon clicking the poster */
   getInfo() {
     this._backButton.addEventListener("click", () => {
       this._mainHome.classList.remove("invisible");

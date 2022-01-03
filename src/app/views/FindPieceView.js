@@ -1,4 +1,5 @@
 class FindPieceView {
+  /* create the poster containing basic info upon the search method */
   addItems(itemImg, div, title, rating) {
     div.innerHTML = `
     <img src=${itemImg}>
