@@ -6,7 +6,7 @@ class ItemInfoService {
   findByTitle(title, postersTop, postersMovies, postersSeries, i, type) {
     $.ajax({
       method: "GET",
-      url: `http://www.omdbapi.com/?apikey=c6f76f28&t=${title}`,
+      url: `https://www.omdbapi.com/?apikey=c6f76f28&t=${title}`,
       success: function (response) {
         /* 
           call the method to set the movie/series data
