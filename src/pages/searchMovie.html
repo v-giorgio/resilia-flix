@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResiliaFlix - Buscar</title>
+
+  <!-- PAGE ICON -->
+  <link rel="icon" href="../assets/img/logo-icon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/styles/styles.css" />
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/f39272e892.js" crossorigin="anonymous"></script>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <!--FONT AEWSOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-color shadow-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../index.html"><img class="logo-style" width="200" src="../assets/img/logo.png"
+            alt="Logo" /></a>
+        <button class="navbar-toggler button" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav navbar-item">
+            <a class="nav-link" id="navbar-text-color" aria-current="page" href="../../index.html">Home</a>
+            <a class="nav-link" id="navbar-text-color" href="./login.html">Entrar</a>
+            <a class="nav-link" href="./searchMovie.html"><img class="icon-style" width="30" height="30"
+                src="../assets/img/lupa-icon.png" alt="Buscar" /></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SEARCH -->
+  <main class="container-search">
+    <h1>Procure seu filme ou série</h1>
+    <div class="search-box">
+      <input class="search-txt" id="search-input" type="text" name="" placeholder="Digite para buscar" />
+      <a class="search-btn" href="#">
+        <i class="fas fa-search"></i>
+      </a>
+    </div>
+
+
+    <section class="receive-movie">
+      <h1 class="box-movie-title">Resultados da busca</h1>
+      <span class="error-search"></span>
+      <div class="receive-movie-results">
+        <div id="info-1" class="box-movie"></div>
+        <div id="info-2" class="box-movie"></div>
+        <div id="info-3" class="box-movie"></div>
+        <div id="info-4" class="box-movie"></div>
+        <div id="info-5" class="box-movie"></div>
+        <div id="info-6" class="box-movie"></div>
+        <div id="info-7" class="box-movie"></div>
+        <div id="info-8" class="box-movie"></div>
+        <div id="info-9" class="box-movie"></div>
+        <div id="info-10" class="box-movie"></div>
+        <div id="info-11" class="box-movie"></div>
+        <div id="info-12" class="box-movie"></div>
+        <div id="info-13" class="box-movie"></div>
+        <div id="info-14" class="box-movie"></div>
+        <div id="info-15" class="box-movie"></div>
+        <div id="info-16" class="box-movie"></div>
+        <div id="info-17" class="box-movie"></div>
+        <div id="info-18" class="box-movie"></div>
+        <div id="info-19" class="box-movie"></div>
+        <div id="info-20" class="box-movie"></div>
+        <div id="info-21" class="box-movie"></div>
+        <div id="info-22" class="box-movie"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MAIN INFO -->
+  <main class="main-infoFilme invisible">
+    <section class="container">
+      <div class="row">
+        <div class="bg-image-info"></div>
+        <div class="containerBig">
+          <div class="info-back">
+            <img src="../assets/img/return-icon.png" alt="Return Icon" srcset="" />
+            <button class="info-back-button">Voltar</button>
+          </div>
+          <div class="secPoster col-md-3 col-sm-12 justify-content-center">
+            <img class="posterInfo" alt="poster" />
+          </div>
+          <div class="movieDiv">
+            <div class="boxTitle row">
+              <!-- title query -->
+              <h3 id="titleMovie"></h3>
+            </div>
+            <button class="watch-button" id="watch">
+              <img width="20px" src="../assets/img/play-icon.png" alt="Play Icon" srcset="" />
+              Assistir
+            </button>
+          </div>
+        </div>
+        <div class="container-info">
+          <div class="boxInfos">
+            <section class="infoRow">
+              <!-- rating query -->
+              <div class="icons-containers">
+                <i class="fas fa-star-half-alt"></i>
+                <p id="rating"></p>
+              </div>
+              <!-- year query -->
+              <div class="icons-containers">
+                <i class="fas fa-calendar-times"></i>
+                <p id="year"></p>
+              </div>
+              <!-- duration query -->
+              <div class="icons-containers">
+                <i class="fas fa-hourglass-half"></i>
+                <p id="duration"></p>
+              </div>
+            </section>
+            <section class="sinopse">
+              <!-- description query-->
+              <p id="sinopseText"></p>
+            </section>
+          </div>
+          <section class="sectionBox">
+            <div class="box-casting">
+              <!-- directors query-->
+              <h6>Direção:</h6>
+              <p id="director"></p>
+              <!-- cast query-->
+              <h6>Elenco:</h6>
+              <p id="cast"></p>
+              <!-- gender query-->
+              <h6>Gênero:</h6>
+              <p id="gender"></p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- VIDEO MAIN -->
+  <main class="main-video invisible">
+    <section class="container">
+      <div class="containerBig">
+        <div class="info-back-button-tr">
+          <img width="20px" src="../assets/img/return-icon.png" alt="Play Icon" srcset="" />
+          <button class="info-back-button-trailer">Voltar</button>
+        </div>
+        <iframe id="iframeSection" frameborder="0" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer position-relative-bottom">
+    <div class="container">
+      <div class="row">
+        <!-- Details Footer -->
+        <div class="col-md-3 col-sm-12 item justify-content-center">
+          <h3>Detalhes</h3>
+          <ul>
+            <li><a href="./details.html">Especificações</a></li>
+            <li><a href="#">Parceiros</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Footer -->
+        <div class="col-md-3 col-sm-12 item justify-content-center">
+          <h3>Contato</h3>
+          <ul>
+            <li><a href="./contact.html">Equipe</a></li>
+            <li><a href="./suggestions.html">Sugestão</a></li>
+          </ul>
+        </div>
+
+        <!-- About Footer -->
+        <div class="col-md-6 item text">
+          <h3>Sobre</h3>
+          <p>
+            Serviço de streaming de filmes e séries focados em produções dirigidas, produzidas e protagonizadas por
+            pessoas negras.
+          </p>
+        </div>
+      </div>
+
+      <div class="container col item icons container flex justify-content-center">
+        <!-- Footer Icons -->
+        <section class="col item-icon icons">
+          <a href="https://www.linkedin.com/school/resilia-educacao" target="_blank"><i class="fab fa-linkedin"
+              style="font-size: 36px;"></i></a>
+          <a href="https://www.facebook.com/resilia.br" target="_blank"><i class="fa fa-facebook-square"
+              style="font-size: 36px;"></i></a>
+          <a href="https://www.instagram.com/resilia.br/" target="_blank"><i class="fa fa-instagram"
+              style="font-size: 36px;"></i></a>
+          <a href="https://github.com/v-giorgio/resilia-flix" target="_blank"><i class="fa fa-github"
+              style="font-size: 36px;"></i></a>
+        </section>
+
+        <div class="container d-flex justify-content-center">
+          <a href="../../index.html"><img class="logo" width="250" src="../assets/img/logo.png" /></a>
+        </div>
+
+        <p class="copyright">&copy;2021 - All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+  <script type="module" src="../app/controllers/FindPieceController.js"></script>
+</body>
+
+</html>
