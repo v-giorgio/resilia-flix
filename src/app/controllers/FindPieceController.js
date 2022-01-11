@@ -60,7 +60,7 @@ class FindPieceController {
 
   /* locate the piece in the localstorage according to every char in the input upon blur action */
   findPiece() {
-    this._searchInput.addEventListener("blur", (event) => {
+    this._searchInput.addEventListener("keyup", (event) => {
       event.preventDefault();
       let listItems = [];
       this._view.clearDivs(
